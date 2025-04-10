@@ -1,3 +1,5 @@
+import CallToAction from "@/components/CallToAction";
+import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
 import Introduction from "@/components/Introduction";
 import Navbar from "@/components/Navbar";
@@ -13,6 +15,8 @@ export default function Home() {
         <Introduction />
         <Projects />
         <Skills />
+        <CallToAction />
+        <Footer />
       </div>
     </div>
   );
