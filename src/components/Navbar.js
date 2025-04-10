@@ -1,11 +1,13 @@
 "use client";
 
 import Image from "next/image";
-import logoImage from "@/assets/logo.svg";
+
+import emailSvg from "@/assets/email.svg";
 import Button from "@/common/Button";
 import { useState } from "react";
 import { twMerge } from "tailwind-merge";
 import { AnimatePresence, motion } from "framer-motion";
+import Banner from "@/common/Banner";
 
 const navLinks = [
   { label: "About", href: "#" },
@@ -22,11 +24,7 @@ const Navbar = () => {
       <div className="container mx-auto">
         <div className="border border-white/15 rounded-[27px] md:rounded-full bg-neutral-950/70 backdrop-blur">
           <div className="flex items-center justify-between p-2 px-4 md:pr-2">
-            <Image
-              src={logoImage}
-              alt="Logo"
-              className="h-9 md:h-auto w-auto"
-            />
+            <Banner />
 
             <nav className="lg:flex gap-6 font-medium hidden">
               {navLinks.map((e) => {
@@ -82,8 +80,11 @@ const Navbar = () => {
               </svg>
 
               <div className="md:flex items-center gap-4 hidden">
-                <Button type="secondary">Email Me</Button>
-                <Button type="primary">Resume</Button>
+                <Button type="secondary" className="flex items-center gap-1">
+                  Email Me
+                  <Image src={emailSvg} alt="" className="size-6 fill-white" />
+                </Button>
+                {/* <Button type="primary">Resume</Button> */}
               </div>
             </div>
           </div>

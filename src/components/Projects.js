@@ -31,7 +31,7 @@ const Projects = () => {
         </div>
 
         <h2 className="text-6xl font-medium text-center mt-6 max-w-2xl mx-auto">
-          Where power meets <span className="text-lime-400">simplicity</span>
+          My Creative Internet <span className="text-lime-400">Playground</span>
         </h2>
 
         <div className="mt-12 grid grid-cols-1 md:grid-cols-4 lg:grid-cols-3 gap-8">

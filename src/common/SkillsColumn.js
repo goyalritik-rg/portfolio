@@ -24,13 +24,13 @@ function SkillsColumn({ skillsArray = [], reverse = false, className = "" }) {
               return (
                 <div
                   key={skill.name}
-                  className="bg-neutral-900 border border-white/10 p-6 rounded-3xl"
+                  className="bg-neutral-900 border border-white/10 p-6 rounded-3xl flex justify-center items-center flex-col"
                 >
-                  <div className="flex justify-center">
+                  <div className="flex justify-center items-center rounded-[24px] bg-white h-32 w-32 ">
                     <Image
                       src={skill.icon}
                       alt={skill.name}
-                      className="size-24"
+                      className="size-22"
                     />
                   </div>
 

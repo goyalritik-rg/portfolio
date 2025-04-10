@@ -1,4 +1,5 @@
 import logoImage from "@/assets/logo.svg";
+import Banner from "@/common/Banner";
 import Image from "next/image";
 const footerLinks = [
   { href: "#", label: "Contact" },
@@ -10,7 +11,7 @@ const Footer = () => {
   return (
     <section className="py-16">
       <div className="container flex flex-col items-center gap-6 md:flex-row md:justify-between">
-        <Image src={logoImage} alt="Logo" />
+        <Banner />
 
         <nav className="flex gap-6">
           {footerLinks.map((link) => {

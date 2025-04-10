@@ -4,8 +4,9 @@ import Tag from "@/common/Tag";
 import { useScroll, useTransform } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import { twMerge } from "tailwind-merge";
+
 const text =
-  "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet error excepturi corporis doloribus modi voluptates sit quae repudiandae quod perferendis, obcaecati optio quibusdam dolores a blanditiis. Molestias quia modi quis.";
+  "I write code that looks good and works even better. Obsessive about clean UI, smooth animations, and responsive layouts — I turn Figma dreams into functional, user-friendly web experiences.";
 
 const words = text.split(" ");
 
@@ -51,7 +52,7 @@ const Introduction = () => {
             <br />
 
             <div className="text-lime-400 mt-4">
-              Lorem ipsum dolor sit amet.
+              Crafting Web, One Pixel At A Time.
             </div>
           </div>
         </div>

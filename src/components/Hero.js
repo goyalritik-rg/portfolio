@@ -5,8 +5,10 @@ import Pointer from "@/common/Pointer";
 import SampleBlock from "@/common/SampleBlock";
 import { motion, useAnimate } from "framer-motion";
 import { useEffect } from "react";
+import downloadSvg from "@/assets/download.svg";
 
 import customCursor from "@/assets/cursor-you.svg";
+import Image from "next/image";
 
 const Hero = () => {
   const [leftDesignScope, leftDesignAnimate] = useAnimate();
@@ -111,10 +113,10 @@ const Hero = () => {
         </p>
 
         <div className="flex border border-white/15 rounded-full p-2 mt-8 items-center justify-between max-w-[500px] mx-auto">
-          <div className="bg-transparent px-4">Download Resume</div>
+          <div className="bg-transparent px-4">CTRL + S My Resume</div>
 
           <Button type="primary" size="sm">
-            Download
+            <Image src={downloadSvg} alt="Download" className="size-7" />
           </Button>
         </div>
       </div>
