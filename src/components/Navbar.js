@@ -13,11 +13,14 @@ const navLinks = [
   { label: "About", href: "#" },
   { label: "Projects", href: "#projects" },
   { label: "Skills", href: "#skills" },
-  { label: "Contact", href: "#contact" },
 ];
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+
+  const handleEmail = () => {
+    window.location.href = `mailto:${process.env.NEXT_PUBLIC_MY_EMAIL}`;
+  };
 
   return (
     <section className="py-4 lg:py-8 fixed w-[90%] md:w-[80%] lg:w-[70%] top-0 z-50">
@@ -80,7 +83,11 @@ const Navbar = () => {
               </svg>
 
               <div className="md:flex items-center gap-4 hidden">
-                <Button type="secondary" className="flex items-center gap-1">
+                <Button
+                  type="secondary"
+                  className="flex items-center gap-1"
+                  onClick={handleEmail}
+                >
                   Email Me
                   <Image src={emailSvg} alt="" className="size-6 fill-white" />
                 </Button>
@@ -109,6 +116,7 @@ const Navbar = () => {
                   <Button
                     type="secondary"
                     className="w-[90%] flex items-center gap-2 justify-center"
+                    onClick={handleEmail}
                   >
                     Email Me
                     <Image
