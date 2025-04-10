@@ -8,6 +8,7 @@ import { useEffect, useRef, useState } from "react";
 import downloadSvg from "@/assets/download.svg";
 import customCursor from "@/assets/cursor-you.svg";
 import Image from "next/image";
+import ContactForm from "./ContactForm";
 
 const Hero = () => {
   const containerRef = useRef(null);
@@ -97,11 +98,11 @@ const Hero = () => {
             left: -constraints.right,
             right: 0,
           }}
-          className="absolute -right-90 -top-16 hidden lg:block z-51"
+          className="absolute -right-90 -top-16 hidden lg:block"
         >
-          <SampleBlock height={440} width={310} draggable="false">
-            <div className="w-[310px] h-[440px] flex items-center p-6">
-              Hello2
+          <SampleBlock height={580} width={400} draggable="false">
+            <div className="w-[400px] h-[580px] flex items-center">
+              <ContactForm />
             </div>
           </SampleBlock>
         </motion.div>

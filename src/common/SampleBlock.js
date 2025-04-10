@@ -2,7 +2,7 @@ function Corner({ left, right, bottom, top }) {
   return (
     <div
       style={{ left, top, right, bottom }}
-      className="absolute border-2 border-blue-500 w-3 h-3 bg-white"
+      className="absolute border-2 border-blue-500 w-3 h-3 bg-white z-1"
     ></div>
   );
 }
