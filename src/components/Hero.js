@@ -4,13 +4,16 @@ import Button from "@/common/Button";
 import Pointer from "@/common/Pointer";
 import SampleBlock from "@/common/SampleBlock";
 import { motion, useAnimate } from "framer-motion";
-import { useEffect } from "react";
+import { useEffect, useRef, useState } from "react";
 import downloadSvg from "@/assets/download.svg";
-
 import customCursor from "@/assets/cursor-you.svg";
 import Image from "next/image";
 
 const Hero = () => {
+  const containerRef = useRef(null);
+
+  const [constraints, setConstraints] = useState({});
+
   const [leftDesignScope, leftDesignAnimate] = useAnimate();
   const [leftPointerScope, leftPointerAnimate] = useAnimate();
   const [rightDesignScope, rightDesignAnimate] = useAnimate();
@@ -48,8 +51,25 @@ const Hero = () => {
     ]);
   }, []);
 
+  useEffect(() => {
+    if (!containerRef.current) return;
+
+    const container = containerRef.current;
+
+    const extraSpace = 0.2;
+
+    const { offsetWidth, offsetHeight } = container;
+
+    setConstraints({
+      top: -offsetHeight * extraSpace,
+      left: -offsetWidth * extraSpace,
+      right: offsetWidth * (1 + extraSpace),
+      bottom: offsetHeight * (1 - extraSpace),
+    });
+  }, []);
+
   return (
-    <section className="py-24">
+    <section className="py-24" ref={containerRef}>
       <div
         className="container relative"
         style={{ cursor: `url(${customCursor.src}), auto` }}
@@ -58,6 +78,7 @@ const Hero = () => {
           ref={leftDesignScope}
           initial={{ opacity: 0, y: 100, x: -100 }}
           drag
+          dragConstraints={{ ...constraints, left: 0 }}
           className="absolute -left-80 top-16 hidden lg:block"
         >
           <SampleBlock height={440} width={310} draggable="false">
@@ -71,7 +92,12 @@ const Hero = () => {
           ref={rightDesignScope}
           initial={{ opacity: 0, y: 100, x: 100 }}
           drag
-          className="absolute -right-90 -top-16 hidden lg:block"
+          dragConstraints={{
+            ...constraints,
+            left: -constraints.right,
+            right: 0,
+          }}
+          className="absolute -right-90 -top-16 hidden lg:block z-51"
         >
           <SampleBlock height={440} width={310} draggable="false">
             <div className="w-[310px] h-[440px] flex items-center p-6">
