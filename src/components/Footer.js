@@ -1,6 +1,5 @@
-import logoImage from "@/assets/logo.svg";
 import Banner from "@/common/Banner";
-import Image from "next/image";
+
 const footerLinks = [
   { href: "#", label: "Contact" },
   { href: "#", label: "Privacy Policy" },
