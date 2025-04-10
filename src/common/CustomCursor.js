@@ -4,30 +4,20 @@ import { useEffect, useState } from "react";
 
 const CustomCursor = ({ showCustomCursor = false }) => {
   const [position, setPosition] = useState({ x: -100, y: -100 });
-  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
     const handleMouseMove = (e) => {
       setPosition({ x: e.clientX, y: e.clientY });
     };
 
-    const handleMouseEnter = () => setIsVisible(true);
-    const handleMouseLeave = () => setIsVisible(false);
-
     window.addEventListener("mousemove", handleMouseMove);
-
-    document.addEventListener("mouseenter", handleMouseEnter);
-    document.addEventListener("mouseleave", handleMouseLeave);
 
     return () => {
       window.removeEventListener("mousemove", handleMouseMove);
-
-      document.removeEventListener("mouseenter", handleMouseEnter);
-      document.removeEventListener("mouseleave", handleMouseLeave);
     };
   }, []);
 
-  if (!showCustomCursor || !isVisible) {
+  if (!showCustomCursor) {
     return null;
   }
 
