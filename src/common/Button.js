@@ -9,13 +9,14 @@ const sizeClasses = {
   sm: "h-10",
 };
 
-const Button = ({ type = "primary", size = "md", ...props }) => {
+const Button = ({ type = "primary", size = "md", className, ...props }) => {
   return (
     <button
       className={twMerge(
         "border h-12 rounded-full px-6 font-medium cursor-pointer",
         typeClasses[type],
-        sizeClasses[size]
+        sizeClasses[size],
+        className
       )}
       {...props}
     />

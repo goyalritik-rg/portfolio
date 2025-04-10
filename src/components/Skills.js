@@ -41,7 +41,7 @@ const skills = [
 
 export const Skills = () => {
   return (
-    <section className="py-24 overflow-hidden lg:mx-[-10%]">
+    <section className="py-24 overflow-hidden lg:mx-[-10%]" id="skills">
       <div className="container">
         <div className="grid lg:grid-cols-2 items-center lg:gap-16">
           <div className="">
