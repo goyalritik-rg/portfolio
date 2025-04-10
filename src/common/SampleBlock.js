@@ -7,9 +7,9 @@ function Corner({ left, right, bottom, top }) {
   );
 }
 
-const SampleBlock = ({ height = 440, width = 330, children }) => {
+const SampleBlock = ({ height = 440, width = 330, children, ...restProps }) => {
   return (
-    <div className="border border-blue-500 relative">
+    <div className="border border-blue-500 relative" {...restProps}>
       <div className="absolute flex justify-center items-center -bottom-9 left-0 right-0">
         <div className="bg-blue-500 text-white font-semibold text-sm rounded-sm py-0.5 px-1 w-fit">{`${width} x ${height}`}</div>
       </div>

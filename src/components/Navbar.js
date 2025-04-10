@@ -8,9 +8,10 @@ import { twMerge } from "tailwind-merge";
 import { AnimatePresence, motion } from "framer-motion";
 
 const navLinks = [
-  { label: "Home", href: "#" },
+  { label: "About", href: "#" },
   { label: "Projects", href: "#projects" },
   { label: "Skills", href: "#skills" },
+  { label: "Contact", href: "#contact" },
 ];
 
 const Navbar = () => {
@@ -20,7 +21,7 @@ const Navbar = () => {
     <section className="py-4 lg:py-8 fixed w-[90%] md:w-[80%] lg:w-[70%] top-0 z-50">
       <div className="container mx-auto">
         <div className="border border-white/15 rounded-[27px] md:rounded-full bg-neutral-950/70 backdrop-blur">
-          <div className="grid grid-cols-2 lg:grid-cols-3 p-2 px-4 md:pr-2 items-center">
+          <div className="flex items-center justify-between p-2 px-4 md:pr-2">
             <Image
               src={logoImage}
               alt="Logo"

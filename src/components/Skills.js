@@ -2,8 +2,7 @@ import Tag from "@/common/Tag";
 
 import figmaIcon from "@/assets/figma-logo.svg";
 import framerIcon from "@/assets/framer-logo.svg";
-import Image from "next/image";
-import { twMerge } from "tailwind-merge";
+import githubIcon from "@/assets/github-logo.svg";
 import SkillsColumn from "@/common/SkillsColumn";
 
 const skills = [
@@ -34,7 +33,7 @@ const skills = [
   },
   {
     name: "GitHub",
-    icon: figmaIcon,
+    icon: githubIcon,
     description: "GitHub is the leading platform for code collaboration.",
   },
 ];
@@ -64,6 +63,7 @@ export const Skills = () => {
 
             <SkillsColumn
               skillsArray={skills.slice().reverse()}
+              reverse
               className="hidden md:flex"
             />
           </div>
