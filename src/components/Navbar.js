@@ -106,12 +106,16 @@ const Navbar = () => {
                     );
                   })}
 
-                  <Button type="secondary" className="w-[90%]">
+                  <Button
+                    type="secondary"
+                    className="w-[90%] flex items-center gap-2 justify-center"
+                  >
                     Email Me
-                  </Button>
-
-                  <Button type="primary" className="w-[90%]">
-                    Resume
+                    <Image
+                      src={emailSvg}
+                      alt=""
+                      className="size-6 fill-white"
+                    />
                   </Button>
                 </div>
               </motion.div>

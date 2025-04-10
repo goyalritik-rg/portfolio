@@ -8,10 +8,10 @@ const poppins = Poppins({
   weight: ["400", "500", "600", "700"],
 });
 
-// export const metadata = {
-//   title: "Modern Design Tool Landing Page",
-//   description: "Created with the help of Frontend Tribe",
-// };
+export const metadata = {
+  title: "404 Skills Found",
+  description: "Hello, I’m Responsive",
+};
 
 export default function RootLayout({ children }) {
   return (
