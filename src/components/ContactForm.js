@@ -1,6 +1,9 @@
+import { sendEmail } from "@/app/api/send/route";
 import Button from "@/common/Button";
 import InputController from "@/common/forms/InputController";
+import { useState } from "react";
 import { useForm } from "react-hook-form";
+import { AnimatePresence, motion } from "framer-motion";
 
 const EMAIL_REGEX = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,})+$/;
 
@@ -32,13 +35,31 @@ const controls = [
 ];
 
 const ContactForm = () => {
+  const [showToast, setShowToast] = useState("");
+
   const {
     control,
     formState: { errors },
     handleSubmit,
+    reset,
   } = useForm();
 
-  const handleSave = () => {};
+  const handleSave = async (values) => {
+    const response = await fetch("/api/send", {
+      method: "POST",
+      body: JSON.stringify(values),
+    });
+
+    if (response.status === 200) {
+      reset();
+
+      setShowToast(true);
+
+      setTimeout(() => {
+        setShowToast(false);
+      }, 2000);
+    }
+  };
 
   return (
     <div className="w-full h-full bg-black cursor-auto p-6 relative">
@@ -64,13 +85,28 @@ const ContactForm = () => {
         })}
       </div>
 
-      <Button
-        className="w-[90%] rounded-none absolute bottom-4 left-[5%]"
-        type="primary"
-        onClick={handleSubmit(handleSave)}
-      >
-        Send
-      </Button>
+      <div className="absolute bottom-4 left-[5%] w-[90%]">
+        <AnimatePresence>
+          {showToast ? (
+            <motion.div
+              initial={{ opacity: 0 }}
+              exit={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              className="text-lime-500 font-bold text-lg mb-4"
+            >
+              Message Sent Successfully!
+            </motion.div>
+          ) : null}
+        </AnimatePresence>
+
+        <Button
+          className="rounded-none w-full"
+          type="primary"
+          onClick={handleSubmit(handleSave)}
+        >
+          Send
+        </Button>
+      </div>
     </div>
   );
 };
