@@ -80,7 +80,7 @@ const Hero = () => {
           initial={{ opacity: 0, y: 100, x: -100 }}
           drag
           dragConstraints={{ ...constraints, left: 0 }}
-          className="absolute -left-80 top-16 hidden lg:block"
+          className="absolute -left-80 top-16 hidden lg:block z-1"
         >
           <SampleBlock height={440} width={310} draggable="false">
             <div className="w-[310px] h-[440px] flex items-center p-6">
@@ -98,7 +98,7 @@ const Hero = () => {
             left: -constraints.right,
             right: 0,
           }}
-          className="absolute -right-90 -top-16 hidden lg:block"
+          className="absolute -right-90 -top-16 hidden lg:block z-1"
         >
           <SampleBlock height={580} width={400} draggable="false">
             <div className="w-[400px] h-[580px] flex items-center">
@@ -110,7 +110,7 @@ const Hero = () => {
         <motion.div
           ref={leftPointerScope}
           initial={{ opacity: 0, y: 100, x: -200 }}
-          className="absolute left-16 top-90 hidden lg:block"
+          className="absolute left-16 top-90 hidden lg:block z-2"
         >
           <Pointer name="Shyam" />
         </motion.div>
@@ -118,7 +118,7 @@ const Hero = () => {
         <motion.div
           ref={rightPointerScope}
           initial={{ opacity: 0, y: 100, x: 275 }}
-          className="absolute right-20 -top-4 hidden lg:block"
+          className="absolute right-20 -top-4 hidden lg:block z-2"
         >
           <Pointer name="Ram" color="red" />
         </motion.div>
