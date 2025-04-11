@@ -35,6 +35,15 @@ const Hero = () => {
     ]);
   };
 
+  const handleDownload = () => {
+    const link = document.createElement("a");
+    link.href = "/resume.pdf";
+    link.download = "Ritik-Goyal-Resume.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   useEffect(() => {
     animateLeftBlock();
 
@@ -158,7 +167,7 @@ const Hero = () => {
         <div className="flex border border-white/15 rounded-full p-2 mt-8 items-center justify-between max-w-[500px] mx-auto">
           <div className="bg-transparent px-4">CTRL + S My Resume</div>
 
-          <Button type="primary" size="sm">
+          <Button type="primary" size="sm" onClick={handleDownload}>
             <Image src={downloadSvg} alt="Download" className="size-7" />
           </Button>
         </div>
