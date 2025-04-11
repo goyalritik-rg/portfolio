@@ -35,7 +35,7 @@ const projects = [
 
 const Projects = () => {
   return (
-    <section className="py-24 lg:pt-50" id="projects">
+    <section className="py-24 lg:pt-30" id="projects">
       <div className="container">
         <div className="flex justify-center">
           <Tag>Projects</Tag>

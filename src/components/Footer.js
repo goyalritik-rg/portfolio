@@ -31,7 +31,7 @@ const footerLinks = [
 
 const Footer = () => {
   return (
-    <section className="py-16">
+    <section className="py-16" id="contact">
       <div className="container flex flex-col items-center gap-6 md:flex-row md:justify-between">
         <Banner />
 

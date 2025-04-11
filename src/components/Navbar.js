@@ -4,7 +4,7 @@ import Image from "next/image";
 
 import emailSvg from "@/assets/email.svg";
 import Button from "@/common/Button";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { twMerge } from "tailwind-merge";
 import { AnimatePresence, motion } from "framer-motion";
 import Banner from "@/common/Banner";
@@ -31,6 +31,10 @@ const Navbar = () => {
 
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
   };
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+  }, []);
 
   return (
     <section className="py-4 lg:py-8 fixed w-[90%] md:w-[80%] lg:w-[70%] top-0 z-50">
