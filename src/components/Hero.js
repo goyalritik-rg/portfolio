@@ -82,7 +82,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <section className="py-24" ref={containerRef}>
+    <section className="pt-40 md:pt-28 h-[100dvh]" ref={containerRef}>
       <div
         className="container relative"
         style={{ cursor: `url(${customCursor.src}), auto` }}
