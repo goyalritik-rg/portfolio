@@ -1,6 +1,8 @@
 import { Poppins } from "next/font/google";
 import "./globals.css";
 
+import { Analytics } from "@vercel/analytics/react";
+
 const poppins = Poppins({
   variable: "--font-poppins",
   subsets: ["latin"],
@@ -20,6 +22,7 @@ export default function RootLayout({ children }) {
         className={`${poppins.variable} font-sans antialiased bg-neutral-950 text-white`}
       >
         {children}
+        <Analytics />
       </body>
     </html>
   );
