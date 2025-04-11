@@ -30,7 +30,7 @@ const CustomCursor = ({ showCustomCursor = false }) => {
         transform: "translate(-50%, -50%)",
       }}
     >
-      <div className="px-3 py-1 w-[120px] rounded-full font-medium bg-white text-black text-sm">
+      <div className="px-3 py-1 w-[125px] rounded-full font-medium bg-white text-black text-sm">
         Yes,please 🙌
       </div>
     </div>

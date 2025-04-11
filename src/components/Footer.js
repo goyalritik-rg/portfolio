@@ -3,8 +3,6 @@
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { IoMdMail } from "react-icons/io";
 
-import { motion } from "framer-motion";
-
 const footerLinks = [
   {
     label: "Github",
@@ -31,21 +29,17 @@ const footerLinks = [
 
 const Footer = () => {
   return (
-    <motion.footer
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.6, ease: "easeOut" }}
+    <footer
       className="w-full py-6 border-t border-neutral-800 text-sm text-neutral-400"
       id="contact"
     >
-      <div className="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between items-start gap-4">
+      <div className="max-w-7xl mx-auto px-4 flex flex-col-reverse md:flex-row justify-between items-center md:items-start gap-4">
         <div className="flex flex-col items-start">
-          <p className="text-neutral-500">
+          <p className="text-neutral-500 text-center">
             Built from scratch with Next.js & a lot of caffeine.
           </p>
 
-          <p className="mt-1">
+          <p className="mt-1 text-center w-full md:text-start">
             © {new Date().getFullYear()} Ritik Goyal —{" "}
             <span className="text-lime-400">Frontend Developer</span>
           </p>
@@ -65,7 +59,7 @@ const Footer = () => {
           })}
         </nav>
       </div>
-    </motion.footer>
+    </footer>
   );
 };
 

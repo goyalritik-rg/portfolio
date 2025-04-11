@@ -91,10 +91,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <section
-      className="pt-40 md:pt-28 h-[100dvh] md:h-[unset] lg:pb-50"
-      ref={containerRef}
-    >
+    <section className="pt-28 lg:pb-50" ref={containerRef}>
       <div
         className="container relative"
         style={{ cursor: `url(${customCursor.src}), auto` }}
