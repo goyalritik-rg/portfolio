@@ -102,11 +102,7 @@ const Navbar = () => {
               </svg>
 
               <div className="md:flex items-center gap-4 hidden">
-                <Button
-                  type="secondary"
-                  className="flex items-center gap-1"
-                  onClick={handleEmail}
-                >
+                <Button type="secondary" onClick={handleEmail}>
                   Email Me
                   <Image src={emailSvg} alt="" className="size-6 fill-white" />
                 </Button>

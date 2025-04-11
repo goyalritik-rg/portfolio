@@ -36,7 +36,14 @@ const Button = ({
       {...props}
       style={{ cursor: loading ? "progress" : "pointer" }}
     >
-      <span className={loading ? "invisible" : "visible"}>{children}</span>
+      <div
+        className={twMerge(
+          "flex items-center gap-1 justify-center",
+          loading ? "invisible" : "visible"
+        )}
+      >
+        {children}
+      </div>
 
       {loading && (
         <span className="absolute inset-0 flex items-center justify-center">
