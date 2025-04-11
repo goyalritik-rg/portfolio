@@ -82,7 +82,10 @@ const Hero = () => {
   }, []);
 
   return (
-    <section className="pt-40 md:pt-28 h-[100dvh]" ref={containerRef}>
+    <section
+      className="pt-40 md:pt-28 h-[100dvh] md:h-[unset] lg:pb-50"
+      ref={containerRef}
+    >
       <div
         className="container relative"
         style={{ cursor: `url(${customCursor.src}), auto` }}
@@ -146,10 +149,10 @@ const Hero = () => {
           <br /> Ritik <span className="text-lime-400">Goyal</span>
         </h1>
 
-        <p className="text-center text-xl text-white/50 mt-8 mx-auto">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae
-          dolor veritatis quas hic consequuntur officiis illum voluptas
-          reprehenderit odit reiciendis.
+        <p className="text-center text-xl text-white/50 mt-8 mx-auto lg:w-[90%]">
+          Living in the browser, styling the web, flexing grids, centering divs,
+          and occasionally fighting with CSS — just another day in the frontend
+          world.
         </p>
 
         <div className="flex border border-white/15 rounded-full p-2 mt-8 items-center justify-between max-w-[500px] mx-auto">

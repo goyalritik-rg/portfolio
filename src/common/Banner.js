@@ -11,10 +11,10 @@ const Banner = () => {
       role="presentation"
       onClick={onClick}
     >
-      <Image src={logoImage} alt="Logo" className="h-9 md:h-auto w-auto" />
+      <Image src={logoImage} alt="Logo" className="h-10 w-auto text-lime-400" />
 
-      <h1 className="text-3xl font-medium">
-        goyal.<span className="text-lime-400">dev</span>
+      <h1 className="text-2xl font-medium">
+        console.log(<span className="text-lime-400">me</span>)
       </h1>
     </div>
   );

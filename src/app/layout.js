@@ -11,8 +11,11 @@ const poppins = Poppins({
 });
 
 export const metadata = {
-  title: "404 Skills Found",
-  description: "Hello, I’m Responsive",
+  title: "console.log(Me)",
+  description: "Made in VS Code",
+  icons: {
+    icon: "/favicon.svg",
+  },
 };
 
 export default function RootLayout({ children }) {

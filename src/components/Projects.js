@@ -8,26 +8,32 @@ import { MdArrowOutward } from "react-icons/md";
 import Image from "next/image";
 
 import rideSure from "@/assets/RideSure.png";
+import portfolio from "@/assets/Portfolio.png";
 
 const projects = [
   {
     image: rideSure,
     label: "Ridesure",
-    description: "Web3 based cab booking platform",
+    description:
+      "Web3-powered cab booking app with crypto payments, dynamic pricing, and seamless onboarding.",
     githubLink: "https://github.com/goyalRitik6776/RideSure",
     siteUrl: "https://ridesure.vercel.app/",
   },
   {
-    image: rideSure,
-    label: "Portfolio",
+    image: portfolio,
+    label: (
+      <div>
+        console.log(<span className="text-lime-400">me</span>)
+      </div>
+    ),
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, quisquam.",
+      "Breaking layouts, fixing bugs, shipping pixels — my frontend playground on the web.",
     githubLink: "https://github.com/goyalritik-rg/portfolio",
-    siteUrl: "",
+    siteUrl: "https://goyal-dev.vercel.app",
   },
   {
     image: rideSure,
-    label: "label3",
+    label: "Project 3",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, quisquam.",
   },
@@ -63,9 +69,7 @@ const Projects = () => {
                   className
                 )}
               >
-                <div className="aspect-video">
-                  <Image src={image} alt={label} />
-                </div>
+                <Image src={image} alt={label} className="aspect-video" />
 
                 <h3 className="text-3xl font-medium mt-6">{label}</h3>
 
