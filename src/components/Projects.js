@@ -9,6 +9,7 @@ import Image from "next/image";
 
 import rideSure from "@/assets/RideSure.png";
 import portfolio from "@/assets/Portfolio.png";
+import ProjectCard from "@/common/ProjectCard";
 
 const projects = [
   {
@@ -53,8 +54,6 @@ const Projects = () => {
 
         <div className="mt-12 grid grid-cols-1 md:grid-cols-4 lg:grid-cols-3 gap-8 lg:mx-[-6%]">
           {projects.map((project, index) => {
-            const { image, label, description, githubLink, siteUrl } = project;
-
             let className = "md:col-span-2 lg:col-span-1";
 
             if (index === projects.length - 1) {
@@ -62,37 +61,11 @@ const Projects = () => {
             }
 
             return (
-              <div
-                key={label}
-                className={twMerge(
-                  "bg-neutral-900 border border-white/15 p-6 rounded-3xl",
-                  className
-                )}
-              >
-                <Image src={image} alt={label} className="aspect-video" />
-
-                <h3 className="text-3xl font-medium mt-6">{label}</h3>
-
-                <p className="text-white/50 mt-2">{description}</p>
-
-                <div className="mt-6 flex items-center gap-4">
-                  <FaGithub
-                    className="text-[32px] cursor-pointer"
-                    onClick={() => window.open(githubLink)}
-                  />
-
-                  <div
-                    role="presentation"
-                    onClick={() => {
-                      window.open(siteUrl);
-                    }}
-                    className="py-1.5 px-3 border border-white/50 rounded-lg w-fit text-sm cursor-pointer flex items-center gap-1"
-                  >
-                    Visit Site
-                    <MdArrowOutward className="text-xl text-white" />
-                  </div>
-                </div>
-              </div>
+              <ProjectCard
+                className={className}
+                project={project}
+                key={project.label}
+              />
             );
           })}
         </div>
