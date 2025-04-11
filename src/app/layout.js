@@ -12,7 +12,7 @@ const poppins = Poppins({
 });
 
 export const metadata = {
-  title: "console.log(Me)",
+  title: "console.log(me)",
   description: "Made in VS Code",
   icons: {
     icon: "/favicon.svg",
