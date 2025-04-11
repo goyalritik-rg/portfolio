@@ -67,13 +67,13 @@ const ContactForm = ({ onSuccess = () => {} }) => {
     <div className="w-full h-full bg-black cursor-auto p-6 relative">
       <Cross className="absolute right-3 top-3" onClick={onSuccess} />
 
-      <h2 className="text-3xl text-white font-bold">Send me a message</h2>
+      <h2 className="text-3xl text-white font-bold">Drop a Line of Code</h2>
 
-      <p className="text-sm text-white/50 mt-2">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, nemo?
+      <p className="text-md text-white/50 mt-2">
+        Your message might just compile perfectly.
       </p>
 
-      <div className="mt-10 flex flex-col gap-6 w-full">
+      <div className="mt-12 flex flex-col gap-6 w-full">
         {controls.map((ctr) => {
           return (
             <div key={ctr.name}>
@@ -108,7 +108,7 @@ const ContactForm = ({ onSuccess = () => {} }) => {
           type="primary"
           onClick={handleSubmit(handleSave)}
         >
-          Send
+          Run Message
         </Button>
       </div>
     </div>

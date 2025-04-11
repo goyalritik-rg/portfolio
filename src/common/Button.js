@@ -1,4 +1,5 @@
 import { twMerge } from "tailwind-merge";
+import { motion } from "framer-motion";
 
 const typeClasses = {
   primary: "bg-lime-400 text-neutral-950 border-lime-400 whitespace-nowrap",
@@ -11,7 +12,8 @@ const sizeClasses = {
 
 const Button = ({ type = "primary", size = "md", className, ...props }) => {
   return (
-    <button
+    <motion.button
+      whileTap={{ scale: 0.95 }}
       className={twMerge(
         "border h-12 rounded-full px-6 font-medium cursor-pointer",
         typeClasses[type],
