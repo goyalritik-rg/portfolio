@@ -1,6 +1,8 @@
 "use client";
 
+import Image from "next/image";
 import { useEffect, useState } from "react";
+import pointer from "@/assets/mouse-pointer.svg";
 
 const CustomCursor = ({ showCustomCursor = false }) => {
   const [position, setPosition] = useState({ x: -100, y: -100 });
@@ -30,7 +32,9 @@ const CustomCursor = ({ showCustomCursor = false }) => {
         transform: "translate(-50%, -50%)",
       }}
     >
-      <div className="px-3 py-1 w-[125px] rounded-full font-medium bg-white text-black text-sm">
+      <Image src={pointer} alt="Cursor" className="relative left-12 top-4" />
+
+      <div className="px-3 py-1 w-[125px] rounded-full font-medium bg-white text-black text-sm relative top-5 left-15">
         Yes,please 🙌
       </div>
     </div>
