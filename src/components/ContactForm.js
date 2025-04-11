@@ -74,7 +74,13 @@ const ContactForm = ({ onSuccess = () => {} }) => {
 
   return (
     <div className="w-full h-full bg-black cursor-auto p-6 relative">
-      <Cross className="absolute right-3 top-3" onClick={onSuccess} />
+      <Cross
+        className="absolute right-3 top-3"
+        onClick={() => {
+          onSuccess();
+          reset();
+        }}
+      />
 
       <h2 className="text-3xl text-white font-bold">Drop a Line of Code</h2>
 
