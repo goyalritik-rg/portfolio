@@ -42,9 +42,9 @@ const skillsSet2 = [
       "React Native builds mobile apps with React for iOS & Android.",
   },
   {
-    name: "Framer",
+    name: "Framer Motion",
     icon: framerIcon,
-    description: "Framer brings React components to life with animations.",
+    description: "Motion brings React components to life with animations.",
   },
   {
     name: "Tailwind CSS",
