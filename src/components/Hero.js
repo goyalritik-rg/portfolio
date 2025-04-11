@@ -110,7 +110,7 @@ const Hero = () => {
             left: -constraints.right,
             right: 0,
           }}
-          className="absolute -right-90 -top-16 hidden lg:block z-1"
+          className="absolute -right-96 -top-25 hidden lg:block z-1"
         >
           <SampleBlock height={580} width={400} draggable="false">
             <div className="w-[400px] h-[580px] flex items-center">
