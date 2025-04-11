@@ -4,6 +4,7 @@ import InputController from "@/common/forms/InputController";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { AnimatePresence, motion } from "framer-motion";
+import Cross from "@/common/Cross";
 
 const EMAIL_REGEX = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,})+$/;
 
@@ -34,8 +35,8 @@ const controls = [
   },
 ];
 
-const ContactForm = () => {
-  const [showToast, setShowToast] = useState("");
+const ContactForm = ({ onSuccess = () => {} }) => {
+  const [showToast, setShowToast] = useState(false);
 
   const {
     control,
@@ -57,12 +58,15 @@ const ContactForm = () => {
 
       setTimeout(() => {
         setShowToast(false);
+        onSuccess();
       }, 2000);
     }
   };
 
   return (
     <div className="w-full h-full bg-black cursor-auto p-6 relative">
+      <Cross className="absolute right-3 top-3" onClick={onSuccess} />
+
       <h2 className="text-3xl text-white font-bold">Send me a message</h2>
 
       <p className="text-sm text-white/50 mt-2">

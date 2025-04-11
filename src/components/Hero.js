@@ -20,11 +20,22 @@ const Hero = () => {
   const [rightDesignScope, rightDesignAnimate] = useAnimate();
   const [rightPointerScope, rightPointerAnimate] = useAnimate();
 
-  useEffect(() => {
+  const animateRightBlock = () => {
+    rightDesignAnimate([
+      [rightDesignScope.current, { opacity: 1 }, { duration: 0.5 }],
+      [rightDesignScope.current, { y: 0, x: 0 }, { duration: 0.5 }],
+    ]);
+  };
+
+  const animateLeftBlock = () => {
     leftDesignAnimate([
       [leftDesignScope.current, { opacity: 1 }, { duration: 0.5 }],
       [leftDesignScope.current, { y: 0, x: 0 }, { duration: 0.5 }],
     ]);
+  };
+
+  useEffect(() => {
+    animateLeftBlock();
 
     leftPointerAnimate([
       [leftPointerScope.current, { opacity: 1 }, { duration: 0.5 }],
@@ -102,7 +113,7 @@ const Hero = () => {
         >
           <SampleBlock height={580} width={400} draggable="false">
             <div className="w-[400px] h-[580px] flex items-center">
-              <ContactForm />
+              <ContactForm onSuccess={animateRightBlock} />
             </div>
           </SampleBlock>
         </motion.div>

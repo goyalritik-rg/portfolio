@@ -10,9 +10,10 @@ import { AnimatePresence, motion } from "framer-motion";
 import Banner from "@/common/Banner";
 
 const navLinks = [
-  { label: "About", href: "#" },
-  { label: "Projects", href: "#projects" },
-  { label: "Skills", href: "#skills" },
+  { label: "About", id: "" },
+  { label: "Projects", id: "projects" },
+  { label: "Skills", id: "skills" },
+  { label: "Contact", id: "contact" },
 ];
 
 const Navbar = () => {
@@ -20,6 +21,15 @@ const Navbar = () => {
 
   const handleEmail = () => {
     window.location.href = `mailto:${process.env.NEXT_PUBLIC_MY_EMAIL}`;
+  };
+
+  const handleScroll = (id) => {
+    if (!id) {
+      window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+      return;
+    }
+
+    document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
@@ -32,9 +42,14 @@ const Navbar = () => {
             <nav className="lg:flex gap-6 font-medium hidden">
               {navLinks.map((e) => {
                 return (
-                  <a href={e.href} key={e.label}>
+                  <div
+                    role="presentation"
+                    onClick={() => handleScroll(e.id)}
+                    key={e.label}
+                    className="cursor-pointer"
+                  >
                     {e.label}
-                  </a>
+                  </div>
                 );
               })}
             </nav>
@@ -107,9 +122,14 @@ const Navbar = () => {
                 <div className="flex flex-col items-center py-4 gap-4">
                   {navLinks.map((e) => {
                     return (
-                      <a href={e.href} key={e.label}>
+                      <div
+                        role="presentation"
+                        onClick={() => handleScroll(e.id)}
+                        key={e.label}
+                        className="cursor-pointer"
+                      >
                         {e.label}
-                      </a>
+                      </div>
                     );
                   })}
 
