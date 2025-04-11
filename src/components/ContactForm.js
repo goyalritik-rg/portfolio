@@ -36,6 +36,7 @@ const controls = [
 ];
 
 const ContactForm = ({ onSuccess = () => {} }) => {
+  const [loading, setLoading] = useState(false);
   const [showToast, setShowToast] = useState(false);
 
   const {
@@ -46,20 +47,28 @@ const ContactForm = ({ onSuccess = () => {} }) => {
   } = useForm();
 
   const handleSave = async (values) => {
-    const response = await fetch("/api/send", {
-      method: "POST",
-      body: JSON.stringify(values),
-    });
+    try {
+      setLoading(true);
 
-    if (response.status === 200) {
-      reset();
+      const response = await fetch("/api/send", {
+        method: "POST",
+        body: JSON.stringify(values),
+      });
 
-      setShowToast(true);
+      if (response.status === 200) {
+        reset();
 
-      setTimeout(() => {
-        setShowToast(false);
-        onSuccess();
-      }, 2000);
+        setShowToast(true);
+
+        setTimeout(() => {
+          setShowToast(false);
+          onSuccess();
+        }, 2000);
+      }
+    } catch (error) {
+      console.error(error);
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -107,6 +116,7 @@ const ContactForm = ({ onSuccess = () => {} }) => {
           className="rounded-none w-full"
           type="primary"
           onClick={handleSubmit(handleSave)}
+          loading={loading}
         >
           Run Message
         </Button>
