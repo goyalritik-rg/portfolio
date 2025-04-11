@@ -9,6 +9,7 @@ import downloadSvg from "@/assets/download.svg";
 import customCursor from "@/assets/cursor-you.svg";
 import Image from "next/image";
 import ContactForm from "./ContactForm";
+import Experiences from "./Experiences";
 
 const Hero = () => {
   const containerRef = useRef(null);
@@ -94,8 +95,8 @@ const Hero = () => {
           className="absolute -left-80 top-16 hidden lg:block z-1"
         >
           <SampleBlock height={440} width={310} draggable="false">
-            <div className="w-[310px] h-[440px] flex items-center p-6">
-              Hello
+            <div className="w-[310px] h-[440px] flex items-center">
+              <Experiences onReset={animateLeftBlock} />
             </div>
           </SampleBlock>
         </motion.div>
