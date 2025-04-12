@@ -24,7 +24,7 @@ const Input = (
         isTextArea && "h-24"
       )}
     >
-      <div className="absolute -top-3 bg-black">{label}</div>
+      <div className="absolute -top-3 bg-black px-1.5">{label}</div>
 
       <input
         ref={ref}

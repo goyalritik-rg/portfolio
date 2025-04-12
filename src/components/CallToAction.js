@@ -16,7 +16,7 @@ const CallToAction = () => {
     ref.current = animate(
       scope.current,
       { x: "-50%" },
-      { duration: 30, repeat: Infinity, ease: "linear" }
+      { duration: 40, repeat: Infinity, ease: "linear" }
     );
   }, []);
 
