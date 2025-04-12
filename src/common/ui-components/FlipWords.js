@@ -27,25 +27,12 @@ export const FlipWords = ({ words, duration = 3000, className }) => {
       }}
     >
       <motion.div
-        initial={{
-          opacity: 0,
-          y: 10,
-        }}
-        animate={{
-          opacity: 1,
-          y: 0,
-        }}
-        transition={{
-          type: "spring",
-          stiffness: 100,
-          damping: 10,
-        }}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ type: "spring", stiffness: 100, damping: 10 }}
         exit={{
           opacity: 0,
-          y: -40,
-          x: 40,
           filter: "blur(8px)",
-          scale: 2,
           position: "absolute",
         }}
         className={cn(
@@ -57,8 +44,8 @@ export const FlipWords = ({ words, duration = 3000, className }) => {
         {currentWord.split(" ").map((word, wordIndex) => (
           <motion.span
             key={word + wordIndex}
-            initial={{ opacity: 0, y: 10, filter: "blur(8px)" }}
-            animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+            initial={{ opacity: 0, filter: "blur(8px)" }}
+            animate={{ opacity: 1, filter: "blur(0px)" }}
             transition={{
               delay: wordIndex * 0.3,
               duration: 0.3,
