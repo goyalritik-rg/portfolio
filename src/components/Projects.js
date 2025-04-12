@@ -1,6 +1,6 @@
 "use client";
 
-import Tag from "@/common/Tag";
+import Tag from "@/common/ui-components/Tag";
 import { twMerge } from "tailwind-merge";
 
 import { FaGithub } from "react-icons/fa";

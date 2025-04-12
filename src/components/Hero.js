@@ -1,6 +1,6 @@
 "use client";
 
-import Button from "@/common/Button";
+import Button from "@/common/ui-components/Button";
 import Pointer from "@/common/Pointer";
 import SampleBlock from "@/common/SampleBlock";
 import { motion, useAnimate } from "framer-motion";

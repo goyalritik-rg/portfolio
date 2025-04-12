@@ -1,4 +1,4 @@
-import Tag from "@/common/Tag";
+import Tag from "@/common/ui-components/Tag";
 import { GrPowerReset } from "react-icons/gr";
 import { useAnimate } from "framer-motion";
 

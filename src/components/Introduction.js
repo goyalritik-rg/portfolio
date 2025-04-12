@@ -1,6 +1,6 @@
 "use client";
 
-import Tag from "@/common/Tag";
+import Tag from "@/common/ui-components/Tag";
 import { useScroll, useTransform } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import { twMerge } from "tailwind-merge";

@@ -3,7 +3,7 @@ import { useState } from "react";
 import { FaGithub } from "react-icons/fa";
 import { MdArrowOutward } from "react-icons/md";
 import { twMerge } from "tailwind-merge";
-import { Lens } from "@/common/Lens";
+import { Lens } from "@/common/ui-components/Lens";
 
 const ProjectCard = ({ className = "", project = {} }) => {
   const [hovering, setHovering] = useState(false);

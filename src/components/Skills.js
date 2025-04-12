@@ -1,4 +1,4 @@
-import Tag from "@/common/Tag";
+import Tag from "@/common/ui-components/Tag";
 
 import framerIcon from "@/assets/framer-logo.svg";
 import reactIcon from "@/assets/react-logo.svg";
