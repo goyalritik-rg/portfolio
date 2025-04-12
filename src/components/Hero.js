@@ -10,6 +10,9 @@ import customCursor from "@/assets/cursor-you.svg";
 import Image from "next/image";
 import ContactForm from "./ContactForm";
 import Experiences from "./Experiences";
+import { FlipWords } from "@/common/ui-components/FlipWords";
+
+const heroWords = ["Designs", "Layouts", "Dreams", "Schemes"];
 
 const Hero = () => {
   const containerRef = useRef(null);
@@ -150,15 +153,22 @@ const Hero = () => {
           </div>
         </div>
 
-        <h1 className="text-6xl md:text-7xl lg:text-8xl font-medium text-center mt-6">
-          Hi, I am
-          <br /> Ritik <span className="text-lime-400">Goyal</span>
+        <h1 className="text-5xl md:text-6xl lg:text-7xl font-medium text-center mt-6 leading-[1.18]">
+          Shaping
+          <FlipWords
+            words={heroWords}
+            className="text-lime-400 dark:text-lime-400"
+          />
+          <br />
+          into Reality
         </h1>
 
-        <p className="text-center text-xl text-white/50 mt-8 mx-auto lg:w-[90%]">
-          Living in the browser, styling the web, flexing grids, centering divs,
-          and occasionally fighting with CSS — just another day in the frontend
-          world.
+        <p className="text-center text-2xl text-white/50 mt-8 mx-auto lg:w-[90%]">
+          <span className="text-white">
+            Hi, I&apos;m <span className="text-lime-400">Ritik</span>
+          </span>{" "}
+          — a frontend developer based in Mumbai, crafting slick UIs with
+          precision and passion.
         </p>
 
         <div className="flex border border-white/15 rounded-full p-2 mt-8 items-center justify-between max-w-[500px] mx-auto">
