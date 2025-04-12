@@ -11,7 +11,7 @@ function SkillsColumn({ skillsArray = [], reverse = false, className = "" }) {
       initial={{ y: reverse ? "-50%" : 0 }}
       animate={{ y: reverse ? 0 : "-50%" }}
       transition={{
-        duration: 16,
+        duration: 20,
         repeat: Infinity,
         ease: "linear",
       }}
