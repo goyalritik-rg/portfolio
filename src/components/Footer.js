@@ -51,7 +51,7 @@ const Footer = () => {
 
             return (
               <Icon
-                className="text-white/50 hover:text-white transition text-2xl cursor-pointer"
+                className="text-white/50 hover:text-white text-2xl cursor-pointer transition-colors"
                 key={label}
                 onClick={onClick}
               />
