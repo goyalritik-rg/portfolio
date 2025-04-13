@@ -12,7 +12,7 @@ import ContactForm from "./ContactForm";
 import Experiences from "./Experiences";
 import { FlipWords } from "@/common/ui-components/FlipWords";
 
-const heroWords = ["Designs", "Layouts", "Dreams", "Schemes"];
+const heroWords = ["Designs", "Layouts", "Dreams", "Ideas"];
 
 const Hero = () => {
   const containerRef = useRef(null);
