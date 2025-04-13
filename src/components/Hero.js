@@ -1,8 +1,8 @@
 "use client";
 
 import Button from "@/common/ui-components/Button";
-import Pointer from "@/common/Pointer";
-import SampleBlock from "@/common/SampleBlock";
+import Pointer from "@/common/components/Pointer";
+import SampleBlock from "@/common/components/SampleBlock";
 import { motion, useAnimate } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import downloadSvg from "@/assets/download.svg";

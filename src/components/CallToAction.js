@@ -1,6 +1,6 @@
 "use client";
 
-import CustomCursor from "@/common/CustomCursor";
+import CustomCursor from "@/common/components/CustomCursor";
 import { motion, useAnimate } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import { twMerge } from "tailwind-merge";

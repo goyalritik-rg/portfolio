@@ -9,7 +9,7 @@ import Image from "next/image";
 
 import rideSure from "@/assets/RideSure.png";
 import portfolio from "@/assets/Portfolio.png";
-import ProjectCard from "@/common/ProjectCard";
+import ProjectCard from "@/common/components/ProjectCard";
 
 const projects = [
   {

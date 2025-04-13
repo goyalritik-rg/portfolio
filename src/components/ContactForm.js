@@ -4,7 +4,7 @@ import InputController from "@/common/forms/InputController";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { AnimatePresence, motion } from "framer-motion";
-import Cross from "@/common/Cross";
+import Cross from "@/common/components/Cross";
 
 const EMAIL_REGEX = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,})+$/;
 

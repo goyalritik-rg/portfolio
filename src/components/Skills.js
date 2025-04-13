@@ -8,7 +8,7 @@ import githubIcon from "@/assets/github-logo.svg";
 import tailwindIcon from "@/assets/tailwind-logo.svg";
 import reduxIcon from "@/assets/redux-logo.svg";
 import jiraIcon from "@/assets/jira-logo.svg";
-import SkillsColumn from "@/common/SkillsColumn";
+import SkillsColumn from "@/common/components/SkillsColumn";
 
 const skillsSet1 = [
   {

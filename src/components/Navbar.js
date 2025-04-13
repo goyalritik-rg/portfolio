@@ -7,7 +7,7 @@ import Button from "@/common/ui-components/Button";
 import { useEffect, useState } from "react";
 import { twMerge } from "tailwind-merge";
 import { AnimatePresence, motion } from "framer-motion";
-import Banner from "@/common/Banner";
+import Banner from "@/common/components/Banner";
 
 const navLinks = [
   { label: "About", id: "" },
