@@ -155,6 +155,7 @@ const Hero = () => {
 
         <h1 className="text-5xl md:text-6xl lg:text-7xl font-medium text-center mt-6 leading-[1.18]">
           Shaping
+          <br className="sm:hidden" />
           <FlipWords
             words={heroWords}
             className="text-lime-400 dark:text-lime-400"
