@@ -172,7 +172,7 @@ const Hero = () => {
           precision and passion.
         </p>
 
-        <div className="flex border border-white/15 rounded-full p-2 mt-8 items-center justify-between max-w-[500px] mx-auto">
+        <div className="flex border border-white/20 rounded-full p-2 mt-8 items-center justify-between max-w-[500px] mx-auto">
           <div className="bg-transparent px-4">Download my Resume here</div>
 
           <Button type="primary" size="sm" onClick={handleDownload}>
