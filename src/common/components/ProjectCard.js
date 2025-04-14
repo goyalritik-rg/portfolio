@@ -36,7 +36,7 @@ const ProjectCard = ({ className = "", project = {} }) => {
           onClick={() => {
             window.open(siteUrl);
           }}
-          className="py-1.5 px-3 border border-white/50 rounded-lg w-fit text-sm cursor-pointer flex items-center gap-1"
+          className="py-1.5 px-3 border border-white/50 rounded-lg w-fit text-sm cursor-pointer flex items-center gap-1 hover:border-white transition-all"
         >
           Visit Site
           <MdArrowOutward className="text-xl text-white" />
