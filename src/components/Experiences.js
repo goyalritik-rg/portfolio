@@ -36,7 +36,7 @@ const Experiences = ({ onReset = () => {} }) => {
   };
 
   return (
-    <div className="w-full h-full bg-neutral-950 cursor-auto p-6 relative flex justify-between flex-col-reverse">
+    <div className="w-full h-full cursor-auto p-6 relative flex justify-between flex-col-reverse">
       <GrPowerReset
         ref={scope}
         className="text-white absolute top-3 right-3 text-lg cursor-pointer"

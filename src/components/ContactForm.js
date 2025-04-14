@@ -73,7 +73,7 @@ const ContactForm = ({ onSuccess = () => {} }) => {
   };
 
   return (
-    <div className="w-full h-full bg-neutral-950 cursor-auto p-6 relative">
+    <div className="w-full h-full cursor-auto p-6 relative">
       <Cross
         className="absolute right-3 top-3"
         onClick={() => {

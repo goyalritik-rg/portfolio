@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
-:root {
-    --background: oklch(14.5% 0 0);
+  :root {
+    --background: #171717;
     --foreground: #fff;
   }
   
@@ -9,5 +9,5 @@
 body {
     background: var(--background);
     color: var(--foreground);
-    font-family: Poppins, sans-serif;
+    font-family: poppins, sans-serif;
   }
