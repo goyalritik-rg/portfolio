@@ -26,7 +26,7 @@ const Banner = () => {
       </svg>
 
       <span className="text-2xl font-medium">
-        Ritik <span className="text-2xl text-lime-400">/</span> Goyal
+        Ritik <span className="text-2xl text-lime-400 -mx-1">/</span> Goyal
       </span>
 
       <svg
