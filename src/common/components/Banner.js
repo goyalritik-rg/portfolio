@@ -11,11 +11,37 @@ const Banner = () => {
       role="presentation"
       onClick={onClick}
     >
-      <Image src={logoImage} alt="Logo" className="h-10 w-auto text-lime-400" />
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 10 24"
+        fill="#a3e635"
+        className="h-10 w-auto"
+      >
+        <path
+          d="M8 5l-5 7 5 7M16 5l5"
+          stroke="#A3E635"
+          strokeWidth="2"
+          fill="none"
+        />
+      </svg>
 
-      <h1 className="text-2xl font-medium">
-        console.log(<span className="text-lime-400">me</span>)
-      </h1>
+      <span className="text-2xl font-medium">
+        Ritik <span className="text-2xl text-lime-400">/</span> Goyal
+      </span>
+
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 10 24"
+        fill="#a3e635"
+        className="h-10 w-auto rotate-180"
+      >
+        <path
+          d="M8 5l-5 7 5 7M16 5l5"
+          stroke="#A3E635"
+          strokeWidth="2"
+          fill="none"
+        />
+      </svg>
     </div>
   );
 };
