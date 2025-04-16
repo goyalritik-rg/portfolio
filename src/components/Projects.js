@@ -22,11 +22,7 @@ const projects = [
   },
   {
     image: portfolio,
-    label: (
-      <div>
-        console.log(<span className="text-lime-400">me</span>)
-      </div>
-    ),
+    label: "Portfolio",
     description:
       "Breaking layouts, fixing bugs, shipping pixels — my frontend playground on the web.",
     githubLink: "https://github.com/goyalritik-rg/portfolio",
