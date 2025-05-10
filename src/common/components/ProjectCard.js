@@ -3,9 +3,9 @@
 import Image from "next/image";
 import { useState } from "react";
 import { FaGithub } from "react-icons/fa";
-import { MdArrowOutward } from "react-icons/md";
 import { twMerge } from "tailwind-merge";
 import { Lens } from "@/common/ui-components/Lens";
+import Share from "../svgs/Share";
 
 const ProjectCard = ({ className = "", project = {} }) => {
   const [hovering, setHovering] = useState(false);
@@ -28,20 +28,16 @@ const ProjectCard = ({ className = "", project = {} }) => {
       <p className="text-white/50 mt-2">{description}</p>
 
       <div className="mt-6 flex items-center gap-4">
-        <div
-          role="presentation"
-          onClick={() => {
-            window.open(siteUrl);
-          }}
-          className="py-1.5 px-3 border border-white/50 rounded-lg w-fit text-sm cursor-pointer flex items-center gap-1 hover:border-white transition-all"
-        >
-          Visit Site
-          <MdArrowOutward className="text-xl" />
-        </div>
-
         <FaGithub
           className="text-[32px] cursor-pointer"
           onClick={() => window.open(githubLink)}
+        />
+
+        <Share
+          className="cursor-pointer"
+          onClick={() => {
+            window.open(siteUrl);
+          }}
         />
       </div>
     </div>
