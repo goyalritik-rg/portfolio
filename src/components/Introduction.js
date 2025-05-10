@@ -17,7 +17,7 @@ const Introduction = () => {
 
   const { scrollYProgress } = useScroll({
     target: scrollRef,
-    offset: ["start end", "end end"],
+    offset: ["center end", "center center"],
   });
 
   const wordIndex = useTransform(scrollYProgress, [0, 1], [0, words.length]);
@@ -28,36 +28,35 @@ const Introduction = () => {
 
   return (
     <section className="py-28 lg:pt-40">
-      <div className="container">
-        <div className="sticky top-28 md:top-48 lg:top-32">
-          <div className="flex justify-center">
-            <Tag>Introduction</Tag>
-          </div>
-
-          <div className="text-4xl md:text-5xl lg:text-6xl text-center font-medium mt-10">
-            <span className="text-white/15">
-              {words.map((word, index) => {
-                return (
-                  <span
-                    key={index}
-                    className={twMerge(
-                      "transition-all",
-                      index < currentIndex && "text-white"
-                    )}
-                  >{`${word} `}</span>
-                );
-              })}
-            </span>
-
-            <br />
-
-            <div className="text-lime-400 mt-4">
-              Crafting Web, One Pixel At A Time.
-            </div>
-          </div>
+      <div className="sticky top-28 md:top-48 lg:top-32">
+        <div className="flex justify-center">
+          <Tag>Introduction</Tag>
         </div>
 
-        <div className="h-[150vh]" ref={scrollRef}></div>
+        <div
+          ref={scrollRef}
+          className="text-4xl/snug md:text-5xl/tight lg:text-6xl/tight text-center font-medium mt-10"
+        >
+          <div className="text-white/15">
+            {words.map((word, index) => {
+              const progress = Math.max(0, Math.min(1, currentIndex - index));
+
+              return (
+                <span
+                  key={index}
+                  style={{
+                    color: `rgba(255, 255, 255, ${0.15 + progress * 0.85})`,
+                    transition: "color 0.3s ease",
+                  }}
+                >{`${word} `}</span>
+              );
+            })}
+          </div>
+
+          <div className="text-lime-400 mt-10 md:mt-15">
+            Crafting Web, One Pixel At A Time.
+          </div>
+        </div>
       </div>
     </section>
   );
