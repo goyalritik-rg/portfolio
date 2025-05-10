@@ -11,7 +11,7 @@ function SkillsColumn({ skillsArray = [], reverse = false, className = "" }) {
       initial={{ y: reverse ? "-50%" : 0 }}
       animate={{ y: reverse ? 0 : "-50%" }}
       transition={{
-        duration: 20,
+        duration: 40,
         repeat: Infinity,
         ease: "linear",
       }}
@@ -20,10 +20,10 @@ function SkillsColumn({ skillsArray = [], reverse = false, className = "" }) {
       {Array.from({ length: 2 }).map((_, i) => {
         return (
           <Fragment key={i}>
-            {skillsArray.map((skill) => {
+            {skillsArray.map((skill, idx) => {
               return (
                 <div
-                  key={skill.name}
+                  key={`${i}-${idx}`}
                   className="bg-neutral-900 border border-white/10 p-6 rounded-3xl flex justify-center items-center flex-col"
                 >
                   <div className="flex justify-center items-center rounded-[24px] bg-white h-32 w-32 ">

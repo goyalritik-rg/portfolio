@@ -90,10 +90,13 @@ export const Skills = () => {
               className="flex md:hidden"
             />
 
-            <SkillsColumn skillsArray={skillsSet1} className="hidden md:flex" />
+            <SkillsColumn
+              skillsArray={[...skillsSet1, ...skillsSet1]}
+              className="hidden md:flex"
+            />
 
             <SkillsColumn
-              skillsArray={skillsSet2}
+              skillsArray={[...skillsSet2, ...skillsSet2]}
               reverse
               className="hidden md:flex"
             />
