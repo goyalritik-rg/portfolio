@@ -1,5 +1,6 @@
 "use client";
 
+import PixelText from "@/common/components/PixelText";
 import Tag from "@/common/ui-components/Tag";
 import { useScroll, useTransform } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
@@ -27,7 +28,7 @@ const Introduction = () => {
   }, [wordIndex]);
 
   return (
-    <section className="py-28 lg:pt-40">
+    <section className="py-28 lg:pt-40 container mx-auto">
       <div className="sticky top-28 md:top-48 lg:top-32">
         <div className="flex justify-center">
           <Tag>Introduction</Tag>
@@ -53,9 +54,10 @@ const Introduction = () => {
             })}
           </div>
 
-          <div className="text-lime-400 mt-10 md:mt-15">
-            Crafting Web, One Pixel At A Time.
-          </div>
+          <PixelText
+            text="Crafting Web, One Pixel At A Time."
+            className="text-lime-400 mt-10 md:mt-15 font-medium"
+          />
         </div>
       </div>
     </section>
