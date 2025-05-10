@@ -1,4 +1,3 @@
-import { sendEmail } from "@/app/api/send/route";
 import Button from "@/common/ui-components/Button";
 import InputController from "@/common/forms/InputController";
 import { useState } from "react";

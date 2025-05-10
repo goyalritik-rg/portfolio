@@ -1,12 +1,6 @@
 "use client";
 
 import Tag from "@/common/ui-components/Tag";
-import { twMerge } from "tailwind-merge";
-
-import { FaGithub } from "react-icons/fa";
-import { MdArrowOutward } from "react-icons/md";
-import Image from "next/image";
-
 import rideSure from "@/assets/RideSure.png";
 import portfolio from "@/assets/Portfolio.png";
 import ProjectCard from "@/common/components/ProjectCard";

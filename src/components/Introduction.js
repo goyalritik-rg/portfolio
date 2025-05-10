@@ -4,7 +4,6 @@ import PixelText from "@/common/components/PixelText";
 import Tag from "@/common/ui-components/Tag";
 import { useScroll, useTransform } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
-import { twMerge } from "tailwind-merge";
 
 const text =
   "I write code that looks good and works even better. Obsessive about clean UI, smooth animations, and responsive layouts — I turn Figma dreams into functional, user-friendly web experiences.";
