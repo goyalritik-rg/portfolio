@@ -1,5 +1,3 @@
-"use client";
-
 import Tag from "@/common/ui-components/Tag";
 import rideSure from "@/assets/RideSure.png";
 import portfolio from "@/assets/Portfolio.png";

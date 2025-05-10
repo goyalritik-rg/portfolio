@@ -25,7 +25,6 @@ const PixelText = ({ text, className }) => {
       opacity: 1,
       y: 0,
       scale: 1,
-      filter: "blur(0px)",
       transition: {
         type: "spring",
         damping: 12,
@@ -36,7 +35,6 @@ const PixelText = ({ text, className }) => {
       opacity: 0,
       y: 20,
       scale: 0.8,
-      filter: "blur(8px)",
       transition: {
         type: "spring",
         damping: 12,
