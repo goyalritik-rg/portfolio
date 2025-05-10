@@ -4,10 +4,9 @@ import framerIcon from "@/assets/framer-logo.svg";
 import reactIcon from "@/assets/react-logo.svg";
 import nextIcon from "@/assets/next-logo.svg";
 import javascriptIcon from "@/assets/javascript-logo.svg";
-import githubIcon from "@/assets/github-logo.svg";
 import tailwindIcon from "@/assets/tailwind-logo.svg";
+import supabaseIcon from "@/assets/supabase-logo.svg";
 import reduxIcon from "@/assets/redux-logo.svg";
-import jiraIcon from "@/assets/jira-logo.svg";
 import SkillsColumn from "@/common/components/SkillsColumn";
 
 const skillsSet1 = [
@@ -15,11 +14,6 @@ const skillsSet1 = [
     name: "JavaScript",
     icon: javascriptIcon,
     description: "JavaScript: The web's dynamic programming language.",
-  },
-  {
-    name: "React JS",
-    icon: reactIcon,
-    description: "React is a JavaScript library for building UIs.",
   },
   {
     name: "Next JS",
@@ -31,6 +25,12 @@ const skillsSet1 = [
     name: "Redux",
     icon: reduxIcon,
     description: "Redux: Predictable state container for JavaScript apps.",
+  },
+  {
+    name: "Supabase",
+    icon: supabaseIcon,
+    description:
+      "Supabase: open-source backend with database, auth, and storage.",
   },
 ];
 
@@ -53,14 +53,9 @@ const skillsSet2 = [
       "Tailwind CSS: Utility-first styling for rapid UI development.",
   },
   {
-    name: "GitHub",
-    icon: githubIcon,
-    description: "GitHub is the leading platform for code collaboration.",
-  },
-  {
-    name: "Jira",
-    icon: jiraIcon,
-    description: "Jira: Agile project management and issue tracking tool.",
+    name: "React JS",
+    icon: reactIcon,
+    description: "React is a JavaScript library for building UIs.",
   },
 ];
 
