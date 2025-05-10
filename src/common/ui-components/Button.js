@@ -8,7 +8,7 @@ const typeClasses = {
   primary:
     "bg-lime-400 text-neutral-950 border-lime-400 whitespace-nowrap hover:bg-white hover:border-white",
   secondary:
-    "border-white text-white bg-transparent hover:text-lime-400 hover:border-lime-400",
+    "border-white bg-transparent hover:text-lime-400 hover:border-lime-400",
 };
 
 const loaderClasses = {

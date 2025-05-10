@@ -14,7 +14,7 @@ const SampleBlock = ({ height = 440, width = 330, children, ...restProps }) => {
       {...restProps}
     >
       <div className="absolute flex justify-center items-center -bottom-9 left-0 right-0">
-        <div className="bg-blue-500 text-white font-semibold text-sm rounded-sm py-0.5 px-1 w-fit">{`${width} x ${height}`}</div>
+        <div className="bg-blue-500 font-semibold text-sm rounded-sm py-0.5 px-1 w-fit">{`${width} x ${height}`}</div>
       </div>
 
       <Corner left={-6} top={-6} />
