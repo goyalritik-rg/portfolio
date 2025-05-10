@@ -94,11 +94,12 @@ const Hero = () => {
   }, []);
 
   return (
-    <section className="pt-28 lg:pb-50" ref={containerRef}>
-      <div
-        className="container relative"
-        style={{ cursor: `url(${customCursor.src}), auto` }}
-      >
+    <section
+      className="pt-28 lg:pb-50"
+      ref={containerRef}
+      style={{ cursor: `url(${customCursor.src}), auto` }}
+    >
+      <div className="container relative">
         <motion.div
           ref={leftDesignScope}
           initial={{ opacity: 0, y: 100, x: -100 }}
