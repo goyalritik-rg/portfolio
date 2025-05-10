@@ -26,11 +26,6 @@ const ProjectCard = ({ className = "", project = {} }) => {
       <p className="text-white/50 mt-2">{description}</p>
 
       <div className="mt-6 flex items-center gap-4">
-        <FaGithub
-          className="text-[32px] cursor-pointer"
-          onClick={() => window.open(githubLink)}
-        />
-
         <div
           role="presentation"
           onClick={() => {
@@ -41,6 +36,11 @@ const ProjectCard = ({ className = "", project = {} }) => {
           Visit Site
           <MdArrowOutward className="text-xl text-white" />
         </div>
+
+        <FaGithub
+          className="text-[32px] cursor-pointer"
+          onClick={() => window.open(githubLink)}
+        />
       </div>
     </div>
   );
