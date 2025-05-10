@@ -48,7 +48,7 @@ const CallToAction = () => {
                     hovered && "text-lime-300"
                   )}
                 >
-                  Recruit Me!
+                  Work With Me!
                 </span>
               </div>
             );
