@@ -6,7 +6,7 @@ import { useRef } from "react";
 const PixelText = ({ text, className }) => {
   const ref = useRef(null);
   const isInView = useInView(ref, {
-    once: false,
+    once: true,
     amount: 0.3,
   });
 
