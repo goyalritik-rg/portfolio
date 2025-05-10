@@ -26,3 +26,17 @@ body {
     "calt" 1;
   text-rendering: optimizeLegibility;
 }
+
+input:-webkit-autofill {
+  -webkit-text-fill-color: var(--background);
+  transition: background-color 5000s ease-in-out 0s;
+  -webkit-text-fill-color: #fff;
+}
+
+@media (prefers-color-scheme: dark) {
+  input:-webkit-autofill {
+    -webkit-text-fill-color: var(--background);
+    transition: background-color 5000s ease-in-out 0s;
+    -webkit-text-fill-color: #fff;
+  }
+}

@@ -1,3 +1,5 @@
+"use client";
+
 import { AiOutlineLoading3Quarters } from "react-icons/ai";
 import { twMerge } from "tailwind-merge";
 

@@ -1,3 +1,5 @@
+"use client";
+
 import { twMerge } from "tailwind-merge";
 import { motion } from "framer-motion";
 import Loader from "./Loader";
