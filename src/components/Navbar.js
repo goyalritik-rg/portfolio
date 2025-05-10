@@ -1,13 +1,11 @@
 "use client";
 
-import Image from "next/image";
-
-import emailSvg from "@/assets/email.svg";
 import Button from "@/common/ui-components/Button";
 import { useEffect, useState } from "react";
 import { twMerge } from "tailwind-merge";
 import { AnimatePresence, motion } from "framer-motion";
 import Banner from "@/common/components/Banner";
+import Send from "@/common/svgs/Send";
 
 const navLinks = [
   { label: "About", id: "" },
@@ -104,7 +102,7 @@ const Navbar = () => {
               <div className="md:flex items-center gap-4 hidden">
                 <Button type="secondary" onClick={handleEmail}>
                   Email Me
-                  <Image src={emailSvg} alt="" className="size-6 fill-white" />
+                  <Send className="size-6" />
                 </Button>
               </div>
             </div>
@@ -138,11 +136,7 @@ const Navbar = () => {
                     onClick={handleEmail}
                   >
                     Email Me
-                    <Image
-                      src={emailSvg}
-                      alt=""
-                      className="size-6 fill-white"
-                    />
+                    <Send className="size-6" />
                   </Button>
                 </div>
               </motion.div>
