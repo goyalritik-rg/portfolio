@@ -12,12 +12,24 @@ const poppins = Poppins({
   weight: ["400", "500", "600", "700"],
 });
 
-export const metadata = {
-  title: "console.log(me)",
-  description: "Made in VS Code",
-  icons: {
-    icon: "/favicon.svg",
-  },
+export const generateMetadata = () => {
+  const title = "console.log(me)";
+  const description =
+    "Turning coffee into code since 2023. Bug hunter, pixel perfectionist, and occasional CSS wrangler. Welcome to my digital playground!";
+
+  return {
+    title,
+    description,
+    openGraph: {
+      title,
+      description,
+      type: "website",
+      locale: "en_US",
+    },
+    icons: {
+      icon: "/favicon.svg",
+    },
+  };
 };
 
 export default function RootLayout({ children }) {
