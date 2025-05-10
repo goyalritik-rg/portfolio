@@ -33,7 +33,7 @@ const CallToAction = () => {
 
         <motion.div
           ref={scope}
-          className="flex flex-none gap-16 pr-16 text-6xl md:text-8xl font-medium cursor-pointer"
+          className="flex flex-none gap-16 pr-16 text-6xl md:text-[80px] font-medium cursor-pointer"
           onMouseEnter={() => setHovered(true)}
           onMouseLeave={() => setHovered(false)}
           style={{ cursor: hovered ? "none" : "pointer" }}
@@ -48,7 +48,7 @@ const CallToAction = () => {
                     hovered && "text-lime-300"
                   )}
                 >
-                  Work With Me!
+                  Let&apos;s Connect
                 </span>
               </div>
             );
