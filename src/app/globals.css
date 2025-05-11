@@ -29,6 +29,18 @@ body {
   position: relative;
 }
 
+button,
+input,
+textarea {
+  font-family: inherit;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  -webkit-tap-highlight-color: transparent;
+}
+
 /* Top blur effect overlay */
 body::before {
   content: "";
