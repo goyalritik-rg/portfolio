@@ -45,7 +45,7 @@ const Footer = () => {
               duration: 0.8,
               ease: [0.16, 1, 0.3, 1], // Custom ease curve for smoother motion
             }}
-            className="fixed bottom-4 left-1/2 transform -translate-x-1/2 z-50"
+            className="fixed bottom-4 left-1/2 transform -translate-x-1/2 z-20"
           >
             <FloatingDock
               items={socials.map((o) => ({ ...o, icon: o.colorIcon }))}
