@@ -27,7 +27,7 @@ const CallToAction = () => {
   }, [hovered]);
 
   return (
-    <section className="py-24 w-[100vw] md:ml-[-12%] lg:ml-[-21%]">
+    <section className="py-24 w-[100vw]">
       <div className="overflow-x-clip p-4 flex">
         <CustomCursor showCustomCursor={hovered} />
 

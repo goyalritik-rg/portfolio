@@ -35,12 +35,6 @@ textarea {
   font-family: inherit;
 }
 
-a {
-  text-decoration: none;
-  color: inherit;
-  -webkit-tap-highlight-color: transparent;
-}
-
 /* Top blur effect overlay */
 body::before {
   content: "";
@@ -74,4 +68,13 @@ input:-webkit-autofill {
     transition: background-color 5000s ease-in-out 0s;
     -webkit-text-fill-color: #fff;
   }
+}
+
+.chat-window {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.chat-window::-webkit-scrollbar {
+  display: none;
 }
