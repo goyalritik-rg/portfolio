@@ -1,6 +1,7 @@
 "use server";
 
 import EmailTemplate from "@/common/components/EmailTemplate";
+import { EMAIL } from "@/constants";
 import { Resend } from "resend";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
@@ -11,7 +12,7 @@ export async function POST(request) {
   try {
     const { data, error } = await resend.emails.send({
       from: "Portfolio <onboarding@resend.dev>",
-      to: [process.env.NEXT_PUBLIC_MY_EMAIL],
+      to: [EMAIL],
       subject: "New Message from Portfolio",
       react: EmailTemplate({ name, email, message }),
     });

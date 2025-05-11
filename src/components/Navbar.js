@@ -6,6 +6,7 @@ import { twMerge } from "tailwind-merge";
 import { AnimatePresence, motion } from "framer-motion";
 import Banner from "@/common/components/Banner";
 import Send from "@/common/svgs/Send";
+import { EMAIL } from "@/constants";
 
 const navLinks = [
   { label: "About", id: "" },
@@ -18,7 +19,7 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const handleEmail = () => {
-    window.location.href = `mailto:${process.env.NEXT_PUBLIC_MY_EMAIL}`;
+    window.location.href = `mailto:${EMAIL}`;
   };
 
   const handleScroll = (id) => {
