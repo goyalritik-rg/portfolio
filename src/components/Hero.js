@@ -86,7 +86,7 @@ const Hero = () => {
 
   return (
     <section
-      className="pt-20 lg:pb-40"
+      className="pt-30 md:pt-20 lg:pt-10 lg:pb-40"
       // ref={containerRef}
       style={{ cursor: `url(${customCursor.src}), auto` }}
     >

@@ -24,7 +24,7 @@ const ChatBot = () => {
     <Fragment>
       <motion.button
         onClick={toggleChat}
-        className="fixed cursor-pointer bottom-6 right-6 bg-indigo-600 text-white rounded-full p-4 shadow-xl z-50 hover:bg-indigo-700 transition-all duration-300"
+        className="fixed cursor-pointer bottom-6 right-6 bg-indigo-600 text-white rounded-full p-4 shadow-xl z-20 hover:bg-indigo-700 transition-all duration-300"
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
         aria-label="Chat with AI assistant"
@@ -65,7 +65,7 @@ const ChatBot = () => {
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            className="fixed bottom-0 right-0 md:bottom-24 md:right-6 w-full md:w-96 h-[80vh] md:h-[600px] bg-gray-900 rounded-t-xl md:rounded-xl shadow-2xl z-40 flex flex-col overflow-hidden border border-gray-800"
+            className="fixed bottom-0 right-0 md:bottom-24 md:right-6 w-full md:w-96 h-[85dvh] md:h-[600px] bg-gray-900 rounded-t-xl md:rounded-xl shadow-2xl z-21 flex flex-col overflow-hidden border border-gray-800"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 20 }}
