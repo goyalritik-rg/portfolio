@@ -59,20 +59,15 @@ export async function POST(request) {
   try {
     const { message } = await request.json();
 
-    // Get the generative model
-
-    // Generate prompt with user message
     const prompt = `${SYSTEM_PROMPT}\n\nUser: ${message}\n\nRitik (via AI assistant):`;
 
-    // Generate content
     const result = await genAI.models.generateContent({
-      model: "gemini-2.0-flash",
+      model: "gemini-2.5-pro-exp-03-25",
       contents: prompt,
     });
 
     const text = result.text;
 
-    // Return the Gemini response
     return new Response(
       JSON.stringify({
         content: text,
