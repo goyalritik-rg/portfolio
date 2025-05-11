@@ -64,8 +64,10 @@ const Footer = () => {
           </p>
 
           <p className="mt-1 text-center w-full md:text-start">
-            © {new Date().getFullYear()} Ritik Goyal —{" "}
-            <span className="text-lime-400">Frontend Developer</span>
+            <span className="text-lime-400 mr-1">
+              © {new Date().getFullYear()} Ritik Goyal.
+            </span>
+            All rights reserved.
           </p>
         </div>
 
