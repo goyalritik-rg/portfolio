@@ -1,31 +1,9 @@
 "use client";
 
-import { FaGithub, FaLinkedin } from "react-icons/fa";
-import { IoMdMail } from "react-icons/io";
+import { FloatingDock } from "@/common/ui-components/FloatingDock";
+import GLOBAL_CONSTANS from "@/constants";
 
-const footerLinks = [
-  {
-    label: "Github",
-    icon: FaGithub,
-    onClick: () => {
-      window.open(process.env.NEXT_PUBLIC_MY_GITHUB);
-    },
-  },
-  {
-    label: "Email",
-    icon: IoMdMail,
-    onClick: () => {
-      window.open(`mailto:${process.env.NEXT_PUBLIC_MY_EMAIL}`);
-    },
-  },
-  {
-    label: "LinkedIn",
-    icon: FaLinkedin,
-    onClick: () => {
-      window.open(process.env.NEXT_PUBLIC_MY_LINKEDIN);
-    },
-  },
-];
+const { socials } = GLOBAL_CONSTANS;
 
 const Footer = () => {
   return (
@@ -33,6 +11,8 @@ const Footer = () => {
       className="w-full py-6 border-t border-neutral-800 text-sm text-neutral-400"
       id="contact"
     >
+      <FloatingDock items={socials.map((o) => ({ ...o, icon: o.colorIcon }))} />
+
       <div className="max-w-7xl mx-auto px-4 flex flex-col-reverse md:flex-row justify-between items-center md:items-start gap-4">
         <div className="flex flex-col items-start">
           <p className="text-neutral-500 text-center">
@@ -45,16 +25,20 @@ const Footer = () => {
           </p>
         </div>
 
-        <nav className="flex gap-6">
-          {footerLinks.map((link) => {
-            const { icon: Icon, onClick, label } = link;
+        <nav className="flex gap-4">
+          {socials.map((link, idx) => {
+            const { icon: Icon, href } = link;
 
             return (
-              <Icon
-                className="text-white/50 hover:text-white text-2xl cursor-pointer transition-colors"
-                key={label}
-                onClick={onClick}
-              />
+              <a
+                key={idx}
+                href={href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="cursor-pointer"
+              >
+                <Icon className="text-white/50 hover:text-white text-2xl cursor-pointer transition-colors size-6" />
+              </a>
             );
           })}
         </nav>
