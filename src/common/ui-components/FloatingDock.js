@@ -7,17 +7,15 @@ import { useState } from "react";
 
 export const FloatingDock = ({ items, className }) => {
   return (
-    <div className="fixed bottom-4 left-[calc(50%-100px)] z-100">
-      <div
-        className={cn(
-          "mx-auto h-16 rounded-2xl bg-gray-50 px-6 py-3 dark:bg-neutral-900 flex items-center gap-6",
-          className
-        )}
-      >
-        {items.map((item, idx) => (
-          <IconContainer key={idx} {...item} />
-        ))}
-      </div>
+    <div
+      className={cn(
+        "mx-auto h-16 rounded-2xl bg-gray-50 px-6 py-3 dark:bg-neutral-900 flex items-center gap-6",
+        className
+      )}
+    >
+      {items.map((item, idx) => (
+        <IconContainer key={idx} {...item} />
+      ))}
     </div>
   );
 };
