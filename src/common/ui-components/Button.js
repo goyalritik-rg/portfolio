@@ -20,6 +20,15 @@ const sizeClasses = {
   sm: "h-10",
 };
 
+export const buttonClass = ({ type = "primary", size = "md", className }) => {
+  return twMerge(
+    "border h-12 rounded-full px-6 font-medium cursor-pointer relative transition-all duration-300 ease-in-out flex items-center",
+    typeClasses[type],
+    sizeClasses[size],
+    className
+  );
+};
+
 const Button = ({
   type = "primary",
   size = "md",
@@ -31,12 +40,7 @@ const Button = ({
   return (
     <motion.button
       whileTap={{ scale: 0.95 }}
-      className={twMerge(
-        "border h-12 rounded-full px-6 font-medium cursor-pointer relative transition-all duration-300 ease-in-out",
-        typeClasses[type],
-        sizeClasses[size],
-        className
-      )}
+      className={buttonClass({ type, size, className })}
       {...props}
       style={{ cursor: loading ? "progress" : "pointer" }}
     >
