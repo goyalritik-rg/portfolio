@@ -4,7 +4,6 @@ import { buttonClass } from "@/common/ui-components/Button";
 // import Pointer from "@/common/components/Pointer";
 // import SampleBlock from "@/common/components/SampleBlock";
 // import { motion, useAnimate } from "framer-motion";
-import { useRef } from "react";
 import downloadSvg from "@/assets/download.svg";
 import customCursor from "@/assets/cursor-you.svg";
 import Image from "next/image";
@@ -16,7 +15,7 @@ import { FlipWords } from "@/common/ui-components/FlipWords";
 const heroWords = ["Designs", "Layouts", "Dreams", "Ideas"];
 
 const Hero = () => {
-  const containerRef = useRef(null);
+  // const containerRef = useRef(null);
 
   // const [constraints, setConstraints] = useState({});
 
@@ -87,8 +86,8 @@ const Hero = () => {
 
   return (
     <section
-      className="pt-28 lg:pb-50"
-      ref={containerRef}
+      className="pt-20 lg:pb-40"
+      // ref={containerRef}
       style={{ cursor: `url(${customCursor.src}), auto` }}
     >
       <div className="container relative">
