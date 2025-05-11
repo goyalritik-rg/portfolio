@@ -25,19 +25,21 @@ const ProjectCard = ({ className = "", project = {} }) => {
   } = project;
 
   return (
-    <div>
-      <Lens hovering={hovering} setHovering={setHovering}>
-        <ProjectImage imageHref={image} href={siteUrl} />
-      </Lens>
+    <div className="h-full w-full flex flex-col justify-between">
+      <div>
+        <Lens hovering={hovering} setHovering={setHovering}>
+          <ProjectImage imageHref={image} href={siteUrl} />
+        </Lens>
 
-      <h3 className="text-xl md:text-3xl font-medium mt-4">{label}</h3>
+        <h3 className="text-xl md:text-3xl font-medium mt-4">{label}</h3>
 
-      <p className="text-white/50 mt-2 text-xs md:text-sm">{description}</p>
+        <p className="text-white/50 mt-2 text-xs md:text-sm">{description}</p>
 
-      <div className="flex flex-wrap gap-2 mt-4">
-        {techStack.map((tech, index) => (
-          <TechChip key={index} tech={tech} />
-        ))}
+        <div className="flex flex-wrap gap-2 mt-4">
+          {techStack.map((tech, index) => (
+            <TechChip key={index} tech={tech} />
+          ))}
+        </div>
       </div>
 
       <div className="mt-6 flex items-center gap-4">

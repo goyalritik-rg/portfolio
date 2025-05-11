@@ -44,29 +44,29 @@ const Projects = () => {
           My Creative Internet <span className="text-lime-400">Playground</span>
         </h2>
 
-        {/* <div className="mt-12 grid grid-cols-1 md:grid-cols-4 lg:grid-cols-3 gap-8 lg:mx-[-6%]">
+        <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-20">
           {projects.map((project, index) => {
-            let className = "md:col-span-2 lg:col-span-1";
+            // let className = "md:col-span-2 lg:col-span-1";
 
-            if (index === projects.length - 1) {
-              className += " md:col-start-2 lg:col-start-auto";
-            }
+            // if (index === projects.length - 1) {
+            //   className += " md:col-start-2 lg:col-start-auto";
+            // }
 
             return (
               <ProjectCard
-                className={className}
+                // className={className}
                 project={project}
                 key={index}
               />
             );
           })}
-        </div> */}
+        </div>
 
-        <div className="mt-12 flex flex-col gap-25 max-w-2xl">
+        {/* <div className="mt-12 flex flex-col gap-25 max-w-xl mx-auto">
           {projects.map((project, idx) => {
             return <ProjectCard project={project} key={idx} />;
           })}
-        </div>
+        </div> */}
       </div>
     </section>
   );
