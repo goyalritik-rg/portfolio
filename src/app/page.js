@@ -1,5 +1,5 @@
 import CallToAction from "@/components/CallToAction";
-import ChatBot from "@/components/ChatBot";
+// import ChatBot from "@/components/ChatBot";
 import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
 import Introduction from "@/components/Introduction";
@@ -18,7 +18,7 @@ export default function Home() {
         <Skills />
         <CallToAction />
         <Footer />
-        <ChatBot />
+        {/* <ChatBot /> */}
       </div>
     </div>
   );
