@@ -30,7 +30,7 @@ function SkillsColumn({ skillsArray = [], reverse = false, className = "" }) {
                     <Image
                       src={skill.icon}
                       alt={skill.name}
-                      className="size-22"
+                      className="size-18"
                     />
                   </div>
 

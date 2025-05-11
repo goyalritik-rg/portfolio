@@ -6,6 +6,7 @@ import nextIcon from "@/assets/next-logo.svg";
 import javascriptIcon from "@/assets/javascript-logo.svg";
 import tailwindIcon from "@/assets/tailwind-logo.svg";
 import supabaseIcon from "@/assets/supabase-logo.svg";
+import nodejsIcon from "@/assets/nodejs-logo.svg";
 import reduxIcon from "@/assets/redux-logo.svg";
 import SkillsColumn from "@/common/components/SkillsColumn";
 
@@ -32,6 +33,12 @@ const skillsSet1 = [
     description:
       "Supabase: open-source backend with database, auth, and storage.",
   },
+
+  {
+    name: "React JS",
+    icon: reactIcon,
+    description: "React is a JavaScript library for building UIs.",
+  },
 ];
 
 const skillsSet2 = [
@@ -53,9 +60,9 @@ const skillsSet2 = [
       "Tailwind CSS: Utility-first styling for rapid UI development.",
   },
   {
-    name: "React JS",
-    icon: reactIcon,
-    description: "React is a JavaScript library for building UIs.",
+    name: "Node JS",
+    icon: nodejsIcon,
+    description: "Fast, scalable JavaScript runtime for backend development",
   },
 ];
 
