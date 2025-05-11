@@ -11,6 +11,7 @@ import Image from "next/image";
 import ContactForm from "./ContactForm";
 import Experiences from "./Experiences";
 import { FlipWords } from "@/common/ui-components/FlipWords";
+import TetrisGame from "@/common/components/TetrisGame";
 
 const heroWords = ["Designs", "Layouts", "Dreams", "Ideas"];
 
@@ -109,7 +110,7 @@ const Hero = () => {
         >
           <SampleBlock height={440} width={310} draggable="false">
             <div className="w-[310px] h-[440px] flex items-center">
-              <Experiences onReset={animateLeftBlock} />
+              <TetrisGame onReset={animateLeftBlock} />
             </div>
           </SampleBlock>
         </motion.div>
