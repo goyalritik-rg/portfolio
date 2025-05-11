@@ -9,7 +9,7 @@ const Message = ({ message = {} }) => {
   const Icon = sender === "user" ? FaUser : Sparkle;
 
   const handleLinkClick = (e) => {
-    if (e.target.tagName === "A") {
+    if (e.target.tagName === "A" && e.target.closest(".message-content")) {
       return;
     }
   };
@@ -21,22 +21,24 @@ const Message = ({ message = {} }) => {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.3 }}
       onClick={handleLinkClick}
-      className={`mb-4 gap-2 flex items-end ${sender === "user" ? "self-end flex-row-reverse" : "self-start"}`}
+      className={`mb-4 gap-2.5 flex items-end ${
+        sender === "user" ? "self-end flex-row-reverse" : "self-start"
+      }`}
     >
-      <Icon className="fill-indigo-400 size-6" />
+      <Icon className={`fill-sky-500 size-5 shrink-0`} />
 
       <div
-        className={`max-w-[80%] min-w-1/3 p-4 rounded-xl ${
+        className={`max-w-[85%] min-w-[80px] p-3.5 rounded-lg ${
           sender === "user"
-            ? "bg-gradient-to-br from-indigo-600 to-indigo-700 text-white rounded-br-none shadow-lg"
-            : "bg-gray-800 text-gray-100 rounded-bl-none shadow-md"
+            ? "bg-slate-700 text-white rounded-br-none shadow-md"
+            : "bg-gray-800 text-gray-200 rounded-bl-none shadow-md"
         }`}
       >
-        <div className="text-sm whitespace-pre-wrap">
+        <div className="text-sm whitespace-pre-wrap message-content">
           {formatContent(content)}
         </div>
 
-        <span className="text-[10px] opacity-70 block text-right">
+        <span className="text-[10px] opacity-60 block text-right mt-1.5">
           {new Date(created_at).toLocaleTimeString([], {
             hour: "2-digit",
             minute: "2-digit",

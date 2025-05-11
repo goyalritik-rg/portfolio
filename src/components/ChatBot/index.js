@@ -24,7 +24,7 @@ const ChatBot = () => {
     <Fragment>
       <motion.button
         onClick={toggleChat}
-        className="fixed cursor-pointer bottom-6 right-6 bg-indigo-600 text-white rounded-full p-4 shadow-xl z-20 hover:bg-indigo-700 transition-all duration-300"
+        className="fixed cursor-pointer bottom-6 right-6 bg-blue-600 text-white rounded-full p-4 shadow-xl z-20 hover:bg-blue-700 transition-all duration-300"
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
         aria-label="Chat with AI assistant"
@@ -65,21 +65,23 @@ const ChatBot = () => {
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            className="fixed bottom-0 right-0 md:bottom-24 md:right-6 w-full md:w-96 h-[85dvh] md:h-[600px] bg-gray-900 rounded-t-xl md:rounded-xl shadow-2xl z-21 flex flex-col overflow-hidden border border-gray-800"
+            className="fixed bottom-0 right-0 md:bottom-24 md:right-6 w-full md:w-96 h-[85dvh] md:h-[600px] bg-gray-900 rounded-t-lg md:rounded-lg shadow-2xl z-21 flex flex-col overflow-hidden border border-gray-700"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 20 }}
             transition={{ duration: 0.3 }}
           >
-            <div className="bg-gradient-to-r from-indigo-600 to-purple-600 p-4 flex justify-between items-center">
-              <div className="flex items-center space-x-2">
-                <div className="h-2 w-2 rounded-full bg-green-400 animate-pulse"></div>
-                <h3 className="font-medium text-lg text-white">AI Assistant</h3>
+            <div className="bg-gray-800 p-4 flex justify-between items-center border-b border-gray-700">
+              <div className="flex items-center space-x-3">
+                <div className="h-2.5 w-2.5 rounded-full bg-green-500"></div>
+                <h3 className="font-semibold text-md text-gray-100">
+                  AI Assistant
+                </h3>
               </div>
 
               <button
                 onClick={toggleChat}
-                className="text-white hover:bg-white/10 rounded-full p-1.5 transition-colors"
+                className="text-gray-400 hover:bg-gray-700 rounded-full p-1.5 transition-colors"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -98,36 +100,34 @@ const ChatBot = () => {
               </button>
             </div>
 
-            <div className="flex-1 p-4 overflow-y-auto bg-gray-900 text-gray-100 chat-window">
+            <div className="flex-1 p-4 overflow-y-auto bg-gray-900 text-gray-200 chat-window">
               {messages.length === 0 ? (
                 <EmptyState setInput={setInput} />
               ) : (
                 <Messages messages={messages} />
               )}
-
               {isTyping && <Responding />}
-
               <div ref={messagesEndRef} />
             </div>
 
             <form
               onSubmit={handleSendMessage}
-              className="p-4 border-t border-gray-800 bg-gray-900"
+              className="p-4 border-t border-gray-700 bg-gray-900"
             >
-              <div className="flex relative">
+              <div className="flex relative items-center">
                 <input
                   type="text"
                   ref={inputRef}
                   value={input}
                   onChange={(e) => setInput(e.target.value)}
                   placeholder="Type your message..."
-                  className="flex-1 border border-gray-700 bg-gray-800 text-gray-100 rounded-full px-4 py-3 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent placeholder-gray-500 pr-15"
+                  className={`flex-1 border border-gray-600 bg-gray-800 text-gray-100 rounded-full px-5 py-3 focus:outline-none focus:ring-2 focus:ring-slate-500 focus:border-transparent placeholder-gray-500 pr-12`}
                 />
 
                 <button
                   type="submit"
                   disabled={!input.trim()}
-                  className="absolute right-[10px] top-[8px] bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 rounded-full p-2 disabled:opacity-50 transition-all duration-300 disabled:cursor-not-allowed"
+                  className="absolute right-[10px] top-[8px] bg-gradient-to-r from-blue-600 to-sky-600 hover:from-blue-700 hover:to-sky-700 rounded-full p-2 disabled:opacity-50 transition-all duration-300 disabled:cursor-not-allowed"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"

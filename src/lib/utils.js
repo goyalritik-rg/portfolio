@@ -18,7 +18,6 @@ const parseInlineContent = (text) => {
     if (before) parts.push(before);
 
     if (match[1]) {
-      // Markdown-style [text](url)
       const anchorText = match[2];
       const anchorUrl = match[3];
       parts.push(
@@ -27,7 +26,7 @@ const parseInlineContent = (text) => {
           href={anchorUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="text-purple-400 underline hover:text-purple-300 transition-colors"
+          className="text-sky-400 underline hover:text-sky-300 transition-colors"
         >
           Link
         </a>
@@ -50,7 +49,7 @@ const parseInlineContent = (text) => {
             href={url}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-purple-400 underline hover:text-purple-300 transition-colors"
+            className="text-sky-400 underline hover:text-sky-300 transition-colors"
           >
             Link
           </a>
