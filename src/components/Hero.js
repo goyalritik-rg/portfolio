@@ -169,6 +169,8 @@ const Hero = () => {
 
           <a
             href="/resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
             className={buttonClass({ size: "sm", type: "primary" })}
           >
             <Image src={downloadSvg} alt="Download" className="size-7" />
