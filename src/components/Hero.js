@@ -1,98 +1,89 @@
 "use client";
 
-import Button from "@/common/ui-components/Button";
-import Pointer from "@/common/components/Pointer";
-import SampleBlock from "@/common/components/SampleBlock";
-import { motion, useAnimate } from "framer-motion";
-import { useEffect, useRef, useState } from "react";
+import { buttonClass } from "@/common/ui-components/Button";
+// import Pointer from "@/common/components/Pointer";
+// import SampleBlock from "@/common/components/SampleBlock";
+// import { motion, useAnimate } from "framer-motion";
+import { useRef } from "react";
 import downloadSvg from "@/assets/download.svg";
 import customCursor from "@/assets/cursor-you.svg";
 import Image from "next/image";
-import ContactForm from "./ContactForm";
+// import ContactForm from "./ContactForm";
 import Experiences from "./Experiences";
 import { FlipWords } from "@/common/ui-components/FlipWords";
-import TetrisGame from "@/common/components/TetrisGame";
+// import TetrisGame from "@/common/components/TetrisGame";
 
 const heroWords = ["Designs", "Layouts", "Dreams", "Ideas"];
 
 const Hero = () => {
   const containerRef = useRef(null);
 
-  const [constraints, setConstraints] = useState({});
+  // const [constraints, setConstraints] = useState({});
 
-  const [leftDesignScope, leftDesignAnimate] = useAnimate();
-  const [leftPointerScope, leftPointerAnimate] = useAnimate();
-  const [rightDesignScope, rightDesignAnimate] = useAnimate();
-  const [rightPointerScope, rightPointerAnimate] = useAnimate();
+  // const [leftDesignScope, leftDesignAnimate] = useAnimate();
+  // const [leftPointerScope, leftPointerAnimate] = useAnimate();
+  // const [rightDesignScope, rightDesignAnimate] = useAnimate();
+  // const [rightPointerScope, rightPointerAnimate] = useAnimate();
 
-  const animateRightBlock = () => {
-    rightDesignAnimate([
-      [rightDesignScope.current, { opacity: 1 }, { duration: 0.5 }],
-      [rightDesignScope.current, { y: 0, x: 0 }, { duration: 0.5 }],
-    ]);
-  };
+  // const animateRightBlock = () => {
+  //   rightDesignAnimate([
+  //     [rightDesignScope.current, { opacity: 1 }, { duration: 0.5 }],
+  //     [rightDesignScope.current, { y: 0, x: 0 }, { duration: 0.5 }],
+  //   ]);
+  // };
 
-  const animateLeftBlock = () => {
-    leftDesignAnimate([
-      [leftDesignScope.current, { opacity: 1 }, { duration: 0.5 }],
-      [leftDesignScope.current, { y: 0, x: 0 }, { duration: 0.5 }],
-    ]);
-  };
+  // const animateLeftBlock = () => {
+  //   leftDesignAnimate([
+  //     [leftDesignScope.current, { opacity: 1 }, { duration: 0.5 }],
+  //     [leftDesignScope.current, { y: 0, x: 0 }, { duration: 0.5 }],
+  //   ]);
+  // };
 
-  const handleDownload = () => {
-    const link = document.createElement("a");
-    link.href = "/resume.pdf";
-    link.download = "Ritik-Goyal-Resume.pdf";
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  };
+  // useEffect(() => {
+  //   animateLeftBlock();
 
-  useEffect(() => {
-    animateLeftBlock();
+  //   leftPointerAnimate([
+  //     [leftPointerScope.current, { opacity: 1 }, { duration: 0.5 }],
+  //     [leftPointerScope.current, { y: 0, x: -100 }, { duration: 0.5 }],
+  //     [
+  //       leftPointerScope.current,
+  //       { x: 0, y: [0, 16, 0] },
+  //       { duration: 0.5, ease: "easeInOut" },
+  //     ],
+  //   ]);
 
-    leftPointerAnimate([
-      [leftPointerScope.current, { opacity: 1 }, { duration: 0.5 }],
-      [leftPointerScope.current, { y: 0, x: -100 }, { duration: 0.5 }],
-      [
-        leftPointerScope.current,
-        { x: 0, y: [0, 16, 0] },
-        { duration: 0.5, ease: "easeInOut" },
-      ],
-    ]);
+  //   rightDesignAnimate([
+  //     [rightDesignScope.current, { opacity: 1 }, { duration: 0.5, delay: 1.5 }],
+  //     [rightDesignScope.current, { y: 0, x: 0 }, { duration: 0.5 }],
+  //   ]);
 
-    rightDesignAnimate([
-      [rightDesignScope.current, { opacity: 1 }, { duration: 0.5, delay: 1.5 }],
-      [rightDesignScope.current, { y: 0, x: 0 }, { duration: 0.5 }],
-    ]);
+  //   rightPointerAnimate([
+  //     [
+  //       rightPointerScope.current,
+  //       { opacity: 1 },
+  //       { duration: 0.5, delay: 1.5 },
+  //     ],
+  //     [rightPointerScope.current, { y: 0, x: 175 }, { duration: 0.5 }],
+  //     [rightPointerScope.current, { x: 0, y: [0, 20, 0] }, { duration: 0.5 }],
+  //   ]);
+  // }, []);
 
-    rightPointerAnimate([
-      [
-        rightPointerScope.current,
-        { opacity: 1 },
-        { duration: 0.5, delay: 1.5 },
-      ],
-      [rightPointerScope.current, { y: 0, x: 175 }, { duration: 0.5 }],
-      [rightPointerScope.current, { x: 0, y: [0, 20, 0] }, { duration: 0.5 }],
-    ]);
-  }, []);
+  // useEffect(() => {
+  //   if (!containerRef.current) return;
 
-  useEffect(() => {
-    if (!containerRef.current) return;
+  //   const container = containerRef.current;
 
-    const container = containerRef.current;
+  //   const extraSpace = 0.2;
 
-    const extraSpace = 0.2;
+  //   const { offsetWidth, offsetHeight } = container;
 
-    const { offsetWidth, offsetHeight } = container;
-
-    setConstraints({
-      top: -offsetHeight * extraSpace,
-      left: -offsetWidth * extraSpace,
-      right: offsetWidth * (1 + extraSpace),
-      bottom: offsetHeight * (1 - extraSpace),
-    });
-  }, []);
+  //   setConstraints({
+  //     top: -offsetHeight * extraSpace,
+  //     left: -offsetWidth * extraSpace,
+  //     right: offsetWidth * (1 + extraSpace),
+  //     bottom: offsetHeight * (1 - extraSpace),
+  //   });
+  // }, []);
 
   return (
     <section
@@ -101,7 +92,7 @@ const Hero = () => {
       style={{ cursor: `url(${customCursor.src}), auto` }}
     >
       <div className="container relative">
-        <motion.div
+        {/* <motion.div
           ref={leftDesignScope}
           initial={{ opacity: 0, y: 100, x: -100 }}
           drag
@@ -113,9 +104,9 @@ const Hero = () => {
               <TetrisGame onReset={animateLeftBlock} />
             </div>
           </SampleBlock>
-        </motion.div>
+        </motion.div> */}
 
-        <motion.div
+        {/* <motion.div
           ref={rightDesignScope}
           initial={{ opacity: 0, y: 100, x: 100 }}
           drag
@@ -131,23 +122,23 @@ const Hero = () => {
               <ContactForm onSuccess={animateRightBlock} />
             </div>
           </SampleBlock>
-        </motion.div>
+        </motion.div> */}
 
-        <motion.div
+        {/* <motion.div
           ref={leftPointerScope}
           initial={{ opacity: 0, y: 100, x: -200 }}
           className="absolute left-16 top-90 hidden lg:block z-2"
         >
-          <Pointer name="Shyam" />
-        </motion.div>
+          <Pointer name="User" />
+        </motion.div> */}
 
-        <motion.div
+        {/* <motion.div
           ref={rightPointerScope}
           initial={{ opacity: 0, y: 100, x: 275 }}
           className="absolute right-20 -top-4 hidden lg:block z-2"
         >
-          <Pointer name="Ram" color="red" />
-        </motion.div>
+          <Pointer name="User" color="red" />
+        </motion.div> */}
 
         <div className="flex justify-center">
           <div className="inline-flex py-2 px-4 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full text-neutral-950 font-semibold">
@@ -177,9 +168,12 @@ const Hero = () => {
         <div className="flex border border-white/20 rounded-full p-2 mt-8 items-center justify-between max-w-[500px] mx-auto">
           <div className="bg-transparent px-4">Download my Resume here</div>
 
-          <Button type="primary" size="sm" onClick={handleDownload}>
+          <a
+            href="/resume.pdf"
+            className={buttonClass({ size: "sm", type: "primary" })}
+          >
             <Image src={downloadSvg} alt="Download" className="size-7" />
-          </Button>
+          </a>
         </div>
       </div>
     </section>
