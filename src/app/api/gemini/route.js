@@ -62,7 +62,7 @@ export async function POST(request) {
     const prompt = `${SYSTEM_PROMPT}\n\nUser: ${message}\n\nRitik (via AI assistant):`;
 
     const result = await genAI.models.generateContent({
-      model: "gemini-2.5-pro-exp-03-25",
+      model: "gemini-2.5-flash-preview-04-17-thinking",
       contents: prompt,
     });
 
