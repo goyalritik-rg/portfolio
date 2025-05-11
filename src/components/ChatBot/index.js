@@ -6,6 +6,7 @@ import { Fragment } from "react";
 import EmptyState from "./EmptyState";
 import Messages from "./Messages";
 import Responding from "./Responding";
+import Banner from "@/common/components/Banner";
 
 const ChatBot = () => {
   const {
@@ -65,19 +66,21 @@ const ChatBot = () => {
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            className="fixed bottom-0 right-0 md:bottom-24 md:right-6 w-full md:w-96 h-[85dvh] md:h-[600px] bg-gray-900 rounded-t-lg md:rounded-lg shadow-2xl z-21 flex flex-col overflow-hidden border border-gray-700"
+            className="fixed bottom-0 right-0 md:bottom-24 md:right-6 w-full md:w-96 h-[85dvh] md:h-[600px] bg-gray-900 rounded-t-lg md:rounded-lg shadow-2xl z-100 flex flex-col overflow-hidden border border-gray-700"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 20 }}
             transition={{ duration: 0.3 }}
           >
             <div className="bg-gray-800 p-4 flex justify-between items-center border-b border-gray-700">
-              <div className="flex items-center space-x-3">
+              {/* <div className="flex items-center space-x-3">
                 <div className="h-2.5 w-2.5 rounded-full bg-green-500"></div>
                 <h3 className="font-semibold text-md text-gray-100">
                   AI Assistant
                 </h3>
-              </div>
+              </div> */}
+
+              <Banner />
 
               <button
                 onClick={toggleChat}

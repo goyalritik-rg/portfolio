@@ -1,4 +1,5 @@
 import React from "react";
+import { twMerge } from "tailwind-merge";
 
 const Sparkle = ({ className }) => {
   return (
@@ -9,7 +10,7 @@ const Sparkle = ({ className }) => {
       version="1.1"
       id="_x32_"
       viewBox="0 0 512 512"
-      className={className}
+      className={twMerge("rotate-270", className)}
     >
       <g id="SVGRepo_bgCarrier" strokeWidth="0" />
 
