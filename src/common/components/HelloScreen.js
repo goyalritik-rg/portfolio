@@ -19,6 +19,16 @@ const HelloScreen = () => {
   const [showSplash, setShowSplash] = useState(true);
 
   useEffect(() => {
+    if (showSplash) {
+      document.body.style.overflow = "hidden";
+      document.body.style.pointerEvents = "none";
+    } else {
+      document.body.style.overflow = "";
+      document.body.style.pointerEvents = "";
+    }
+  }, [showSplash]);
+
+  useEffect(() => {
     const interval = setInterval(() => {
       setActiveHelloIndex((prevIndex) => {
         if (prevIndex >= helloMessages.length - 1) {
