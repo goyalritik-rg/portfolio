@@ -5,14 +5,14 @@ import Hero from "@/components/Hero";
 import Introduction from "@/components/Introduction";
 import Navbar from "@/components/Navbar";
 import Projects from "@/components/Projects";
-// import ScrollProgress from "@/components/ScrollProgress";
 import { Skills } from "@/components/Skills";
 import HelloScreen from "@/common/components/HelloScreen";
+import ScrollProgress from "@/common/components/ScrollProgress";
 
 export default function Home() {
   return (
     <div className="flex flex-col items-center max-w-[100vw] overflow-clip md:pt-20 lg:pt-32 relative">
-      {/* <ScrollProgress /> */}
+      <ScrollProgress />
 
       <HelloScreen />
 
