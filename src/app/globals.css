@@ -79,7 +79,7 @@ input:-webkit-autofill {
   display: none;
 }
 
-*::-webkit-scrollbar {
+/* *::-webkit-scrollbar {
   width: 10px;
   height: 10px;
 }
@@ -97,4 +97,4 @@ input:-webkit-autofill {
 * {
   scrollbar-width: thin;
   scrollbar-color: oklch(84.1% 0.238 128.85) #1a1a1a;
-}
+} */
