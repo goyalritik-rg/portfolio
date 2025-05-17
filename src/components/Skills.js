@@ -76,31 +76,22 @@ export const Skills = () => {
               <Tag>Skills</Tag>
             </div>
 
-            <h2 className="text-6xl font-medium text-center mt-6 max-w-2xl mx-auto">
+            <h2 className="text-5xl md:text-6xl font-medium text-center mt-6 max-w-2xl mx-auto">
               <span className="text-lime-400">Tools</span> Behind The Scenes
             </h2>
 
-            <p className="text-white/50 mt-4 text-lg text-center">
+            <p className="text-white/50 mt-4 text-base md:text-lg text-center">
               Every creator needs tools — here are mine. From clean code to
               pixel-perfect designs, these are what bring ideas to life.
             </p>
           </div>
 
-          <div className="h-[400px] lg:h-[800px] mt-8 lg:mt-0 overflow-hidden [mask-image:linear-gradient(to_bottom,transparent,black_10%,black_90%,transparent)] grid md:grid-cols-2 gap-4">
-            <SkillsColumn
-              skillsArray={[...skillsSet1, ...skillsSet2]}
-              className="flex md:hidden"
-            />
-
-            <SkillsColumn
-              skillsArray={[...skillsSet1, ...skillsSet1]}
-              className="hidden md:flex"
-            />
+          <div className="h-[400px] lg:h-[800px] mt-8 lg:mt-0 overflow-hidden [mask-image:linear-gradient(to_bottom,transparent,black_10%,black_90%,transparent)] grid grid-cols-2 gap-4">
+            <SkillsColumn skillsArray={[...skillsSet1, ...skillsSet1]} />
 
             <SkillsColumn
               skillsArray={[...skillsSet2, ...skillsSet2]}
               reverse
-              className="hidden md:flex"
             />
           </div>
         </div>

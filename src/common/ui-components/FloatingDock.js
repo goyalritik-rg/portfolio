@@ -9,7 +9,7 @@ export const FloatingDock = ({ items, className }) => {
   return (
     <div
       className={cn(
-        "mx-auto h-16 rounded-2xl bg-gray-50 px-6 py-3 dark:bg-neutral-900 flex items-center gap-6",
+        "mx-auto h-16 rounded-2xl bg-gray-50 px-6 py-3 dark:bg-neutral-900 flex items-center gap-4",
         className
       )}
     >

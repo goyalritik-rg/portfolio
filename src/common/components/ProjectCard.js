@@ -55,9 +55,9 @@ const ProjectCard = ({ className = "", project = {} }) => {
             className={twMerge(
               "border-1 border-white rounded-3xl h-full w-full mb-8 transition-all duration-300",
               rotateDirection === 1
-                ? "rotate-1"
+                ? "md:rotate-1"
                 : rotateDirection === -1
-                  ? "-rotate-1"
+                  ? "-md:rotate-1"
                   : ""
             )}
             onMouseMove={handleMouseMove}

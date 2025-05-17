@@ -40,7 +40,7 @@ const Projects = () => {
           <Tag>Projects</Tag>
         </div>
 
-        <h2 className="text-6xl font-medium text-center mt-8 max-w-2xl mx-auto">
+        <h2 className="text-5xl md:text-6xl font-medium text-center mt-8 max-w-2xl mx-auto">
           My Creative Internet <span className="text-lime-400">Playground</span>
         </h2>
 

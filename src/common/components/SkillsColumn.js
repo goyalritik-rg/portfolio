@@ -26,17 +26,19 @@ function SkillsColumn({ skillsArray = [], reverse = false, className = "" }) {
                   key={`${i}-${idx}`}
                   className="bg-neutral-900 border border-white/10 p-6 rounded-3xl flex justify-center items-center flex-col"
                 >
-                  <div className="flex justify-center items-center rounded-[24px] bg-white h-32 w-32 ">
+                  <div className="flex justify-center items-center rounded-[24px] bg-white h-20 w-20 md:h-32 md:w-32 ">
                     <Image
                       src={skill.icon}
                       alt={skill.name}
-                      className="size-18"
+                      className="size-10 md:size-18"
                     />
                   </div>
 
-                  <h3 className="text-3xl text-center mt-6">{skill.name}</h3>
+                  <h3 className="text-xl md:text-3xl text-center mt-2 md:mt-6">
+                    {skill.name}
+                  </h3>
 
-                  <p className="text-center text-white/50 mt-2 text-sm">
+                  <p className="text-center text-white/50 mt-2 text-sm max-sm:hidden">
                     {skill.description}
                   </p>
                 </div>
