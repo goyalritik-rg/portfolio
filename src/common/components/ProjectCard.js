@@ -7,6 +7,7 @@ import Share from "../svgs/Share";
 // import ProjectImage from "./ProjectImage";
 import Image from "next/image";
 import { twMerge } from "tailwind-merge";
+import Link from "next/link";
 
 const TechChip = ({ tech }) => (
   <span className="inline-flex items-center px-3 py-1.5 rounded-full text-xs font-medium bg-white/10 text-white/80 backdrop-blur-sm border border-white/10 transition-all hover:bg-white/15">
@@ -49,7 +50,7 @@ const ProjectCard = ({ className = "", project = {} }) => {
   return (
     <div className="w-full flex flex-col justify-between">
       <div>
-        <a href={siteUrl} target="_blank" rel="noopener noreferrer">
+        <Link href={siteUrl} target="_blank" rel="noopener noreferrer">
           <div
             ref={imageContainerRef}
             className={twMerge(
@@ -71,7 +72,7 @@ const ProjectCard = ({ className = "", project = {} }) => {
               className="w-full aspect-video rounded-3xl border-6 border-black saturate-110"
             />
           </div>
-        </a>
+        </Link>
 
         {/* <Lens hovering={hovering} setHovering={setHovering}>
           <ProjectImage imageHref={image} href={siteUrl} />
@@ -89,13 +90,13 @@ const ProjectCard = ({ className = "", project = {} }) => {
       </div>
 
       <div className="mt-6 flex items-center gap-4">
-        <a href={githubLink} target="_blank" rel="noopener noreferrer">
+        <Link href={githubLink} target="_blank" rel="noopener noreferrer">
           <FaGithub className="text-[32px] cursor-pointer" />
-        </a>
+        </Link>
 
-        <a href={siteUrl} target="_blank" rel="noopener noreferrer">
+        <Link href={siteUrl} target="_blank" rel="noopener noreferrer">
           <Share className="cursor-pointer" />
-        </a>
+        </Link>
       </div>
     </div>
   );

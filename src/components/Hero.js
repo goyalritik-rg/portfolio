@@ -10,6 +10,7 @@ import Image from "next/image";
 // import ContactForm from "./ContactForm";
 import Experiences from "./Experiences";
 import { FlipWords } from "@/common/ui-components/FlipWords";
+import Link from "next/link";
 // import TetrisGame from "@/common/components/TetrisGame";
 
 const heroWords = ["Designs", "Layouts", "Dreams", "Ideas"];
@@ -167,14 +168,14 @@ const Hero = () => {
         <div className="flex border border-white/20 rounded-full p-2 mt-8 items-center justify-between max-w-[500px] mx-auto">
           <div className="bg-transparent px-4">Download my Resume here</div>
 
-          <a
+          <Link
             href="/resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className={buttonClass({ size: "sm", type: "primary" })}
           >
             <Image src={downloadSvg} alt="Download" className="size-7" />
-          </a>
+          </Link>
         </div>
       </div>
     </section>

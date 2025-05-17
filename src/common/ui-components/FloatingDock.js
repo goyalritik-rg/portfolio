@@ -2,6 +2,7 @@
 
 import { cn } from "@/lib/utils";
 import { AnimatePresence, motion } from "framer-motion";
+import Link from "next/link";
 
 import { useState } from "react";
 
@@ -24,7 +25,7 @@ function IconContainer({ label, icon: Icon, href }) {
   const [hovered, setHovered] = useState(false);
 
   return (
-    <a href={href}>
+    <Link href={href} target="_blank" rel="noopener noreferrer">
       <div
         onMouseEnter={() => setHovered(true)}
         onMouseLeave={() => setHovered(false)}
@@ -47,6 +48,6 @@ function IconContainer({ label, icon: Icon, href }) {
           <Icon className="size-10 hover:size-14 transition-all duration-300 ease-in-out fill-white" />
         </div>
       </div>
-    </a>
+    </Link>
   );
 }

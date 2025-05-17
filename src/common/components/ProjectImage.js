@@ -1,6 +1,8 @@
+import Link from "next/link";
+
 const ProjectImage = ({ imageHref = "", href = "" }) => {
   return (
-    <a
+    <Link
       target="_blank"
       rel="noopener noreferrer"
       className="flex overflow-hidden bg-linear-to-t from-[#00000000] to-white/10 p-6 group relative rounded-xl"
@@ -145,7 +147,7 @@ const ProjectImage = ({ imageHref = "", href = "" }) => {
           </clipPath>
         </defs>
       </svg>
-    </a>
+    </Link>
   );
 };
 

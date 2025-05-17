@@ -4,6 +4,7 @@ import { FloatingDock } from "@/common/ui-components/FloatingDock";
 import GLOBAL_CONSTANS from "@/constants";
 import { useRef, useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import Link from "next/link";
 
 const { socials } = GLOBAL_CONSTANS;
 
@@ -76,7 +77,7 @@ const Footer = () => {
             const { icon: Icon, href } = link;
 
             return (
-              <a
+              <Link
                 key={idx}
                 href={href}
                 target="_blank"
@@ -84,7 +85,7 @@ const Footer = () => {
                 className="cursor-pointer"
               >
                 <Icon className="text-white/50 hover:text-white text-2xl cursor-pointer transition-colors size-6" />
-              </a>
+              </Link>
             );
           })}
         </nav>
