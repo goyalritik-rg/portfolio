@@ -1,71 +1,101 @@
 import Tag from "@/common/ui-components/Tag";
-import { GrPowerReset } from "react-icons/gr";
-import { useAnimate } from "framer-motion";
+import Timeline from "@/common/ui-components/Timeline";
 
-const EXPERIENCES = [
+export function Highlight({ children }) {
+  return <span className="text-lime-300 font-semibold">{children}</span>;
+}
+
+const experiences = [
   {
-    role: "SDE-1",
-    company: "COGOPORT",
-    duration: "July'23 - Present",
+    title: "B.Tech",
+    startDate: "2019",
+    endDate: "2023",
+    company: "NIT Allahabad",
+    content: (
+      <div>
+        <p className="text-sm md:text-base">
+          Graduated with a <Highlight>CPI of 8.05</Highlight>, gaining a solid
+          foundation in algorithms, systems design, and software engineering.
+        </p>
+      </div>
+    ),
   },
   {
-    role: "SDE Intern",
-    company: "COGOPORT",
-    duration: "Jan'23 - June'23",
+    title: "SDE Intern",
+    startDate: "Feb '23",
+    endDate: "Jul '23",
+    company: "Cogoport, Mumbai",
+    content: (
+      <div>
+        <ul className="list-disc ml-4 md:ml-6 flex flex-col md:gap-4 gap-2">
+          <li>
+            Developed an <Highlight>Announcement Module</Highlight> using React
+            Hook Form for seamless data handling — adopted by{" "}
+            <Highlight>800+ employees</Highlight>.
+          </li>
+          <li>
+            Engineered an <Highlight>Assessment Platform</Highlight> that
+            reduced form code by <Highlight>30%</Highlight> and cut grading time
+            by <Highlight>40%</Highlight>.
+          </li>
+          <li>
+            Migrated critical admin tools to the mobile app using React Native —
+            improving access for <Highlight>800+ users</Highlight>.
+          </li>
+        </ul>
+      </div>
+    ),
+  },
+  {
+    title: "SDE 1",
+    startDate: "Jul '23",
+    endDate: null,
+    company: "Cogoport, Mumbai",
+    content: (
+      <div>
+        <ul className="list-disc ml-4 md:ml-6 flex flex-col md:gap-4 gap-2">
+          <li>
+            Built a multi-modal freight platform (Sea ✈️, Air 🚚, Road)
+            aggregating rates from{" "}
+            <Highlight>50+ logistics providers</Highlight>.
+          </li>
+          <li>
+            Enabled commodity-specific pricing — powering{" "}
+            <Highlight>1000+ monthly bookings</Highlight> across shipping modes.
+          </li>
+          <li>
+            Created a dynamic promotion engine with customizable rules — boosted
+            conversions by <Highlight>25%</Highlight>.
+          </li>
+          <li>
+            Delivered an intelligent RFQ system with margin controls — reduced
+            user input errors by <Highlight>40%</Highlight>.
+          </li>
+          <li>
+            Personally negotiated and secured{" "}
+            <Highlight>300+ high-value bookings</Highlight>, contributing to{" "}
+            <Highlight>50% of yearly revenue</Highlight>.
+          </li>
+          <li>
+            Developed <Highlight>CogoBot</Highlight>, an AI-powered chatbot
+            answering <Highlight>200+ daily queries</Highlight> — cut support
+            tickets by <Highlight>30%</Highlight>.
+          </li>
+        </ul>
+      </div>
+    ),
   },
 ];
 
-const Experiences = ({ onReset = () => {} }) => {
-  const [scope, animate] = useAnimate();
-
-  const triggerAnimation = () =>
-    animate(
-      scope.current,
-      { rotate: 360 },
-      { duration: 1, repeat: Infinity, ease: "linear" }
-    );
-
-  const stopAnimation = () =>
-    animate(scope.current, { rotate: 0 }, { duration: 0.5 });
-
-  const onClick = () => {
-    triggerAnimation();
-    onReset();
-
-    setTimeout(stopAnimation, 1000);
-  };
-
+const Experiences = () => {
   return (
-    <div className="w-full h-full cursor-auto p-6 relative flex justify-between flex-col-reverse">
-      <GrPowerReset
-        ref={scope}
-        className="text-white absolute top-3 right-3 text-lg cursor-pointer"
-        onClick={onClick}
-      />
-
-      <div className="flex flex-col gap-6">
-        <Tag>Education</Tag>
-
-        <div className="flex flex-col gap-1.5">
-          <div className="text-white/50 text-lg font-bold">B.TECH</div>
-          <div className="text-white text-2xl">NIT Allahabad</div>
-        </div>
+    <section className="py-24 container mx-auto" id="experiences">
+      <div className="flex justify-center">
+        <Tag>Education & Experience</Tag>
       </div>
 
-      <div className="flex flex-col gap-6">
-        <Tag>Experiences</Tag>
-
-        {EXPERIENCES.map(({ role, company, duration }, idx) => (
-          <div key={idx} className="flex flex-col gap-1.5">
-            <div className="flex justify-between">
-              <div className="text-white/50 text-lg font-bold">{role}</div>
-              <div className="text-white/50 text-sm">{duration}</div>
-            </div>
-            <div className="text-white text-2xl">{company}</div>
-          </div>
-        ))}
-      </div>
-    </div>
+      <Timeline data={experiences} />
+    </section>
   );
 };
 

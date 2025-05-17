@@ -8,6 +8,7 @@ import Projects from "@/components/Projects";
 import { Skills } from "@/components/Skills";
 import HelloScreen from "@/common/components/HelloScreen";
 import ScrollProgress from "@/common/components/ScrollProgress";
+import Experiences from "@/components/Experiences";
 
 export default function Home() {
   return (
@@ -23,6 +24,7 @@ export default function Home() {
         <Navbar />
         <Hero />
         <Introduction />
+        <Experiences />
         <Projects />
         <Skills />
         <CallToAction />
