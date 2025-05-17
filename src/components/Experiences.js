@@ -14,8 +14,12 @@ const experiences = [
     content: (
       <div>
         <p className="text-sm md:text-base">
-          Graduated with a <Highlight>CPI of 8.05</Highlight>, gaining a solid
-          foundation in algorithms, systems design, and software engineering.
+          As a <Highlight>Mechanical Engineering</Highlight> student, I
+          discovered my passion for coding in the 2nd year of my college. I dove
+          into <Highlight>web development</Highlight> and sharpened my
+          problem-solving skills on <Highlight>LeetCode</Highlight> and{" "}
+          <Highlight>CodeChef</Highlight>, eventually building a strong
+          foundation in software engineering.
         </p>
       </div>
     ),
