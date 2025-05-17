@@ -45,7 +45,7 @@ textarea {
 }
 
 /* Top blur effect overlay */
-body::before {
+#home::before {
   content: "";
   position: fixed;
   top: 0;

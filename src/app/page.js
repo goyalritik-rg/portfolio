@@ -11,7 +11,10 @@ import ScrollProgress from "@/common/components/ScrollProgress";
 
 export default function Home() {
   return (
-    <div className="flex flex-col items-center max-w-[100vw] overflow-clip md:pt-20 lg:pt-32 relative">
+    <div
+      id="home"
+      className="flex flex-col items-center max-w-[100vw] overflow-clip md:pt-20 lg:pt-32 relative"
+    >
       <ScrollProgress />
 
       <HelloScreen />
