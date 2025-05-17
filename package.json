@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
+    "prebuild": "echo NEXT_PUBLIC_LAST_UPDATED=$(git log -1 --format=%cd --date=short) > .env.local",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"

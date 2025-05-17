@@ -42,14 +42,14 @@ const ScrollProgress = () => {
           <div className="absolute inset-0 rounded-full bg-white/10"></div>
 
           <motion.div
-            className="absolute inset-0 origin-top rounded-full bg-lime-400"
+            className="absolute inset-0 origin-top rounded-full bg-green-600"
             style={{
               scaleY: scrollProgress / 100,
               transformOrigin: "top",
             }}
             transition={{ type: "spring", stiffness: 100 }}
           >
-            <div className="absolute inset-[-1px] rounded-full bg-lime-400 blur-[2px] opacity-50"></div>
+            <div className="absolute inset-[-1px] rounded-full bg-emerald-600 blur-[2px] opacity-50"></div>
           </motion.div>
 
           <motion.div

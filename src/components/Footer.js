@@ -58,7 +58,7 @@ const Footer = () => {
 
       <div
         ref={footerRef}
-        className="max-w-7xl mx-auto px-4 flex flex-col-reverse md:flex-row justify-between items-center md:items-start gap-4"
+        className="max-w-7xl mx-auto px-4 flex flex-col-reverse md:flex-row justify-between items-center gap-4"
       >
         <div className="flex flex-col items-start">
           <p className="text-neutral-500 text-center">
@@ -74,23 +74,40 @@ const Footer = () => {
           </p>
         </div>
 
-        <nav className="flex gap-4">
-          {socials.map((link, idx) => {
-            const { icon: Icon, href } = link;
+        <div className="flex flex-col items-start">
+          <nav className="flex gap-4">
+            {socials.map((link, idx) => {
+              const { icon: Icon, href } = link;
 
-            return (
-              <Link
-                key={idx}
-                href={href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="cursor-pointer"
-              >
-                <Icon className="text-white/50 hover:text-white text-2xl cursor-pointer transition-colors size-6" />
-              </Link>
-            );
-          })}
-        </nav>
+              return (
+                <Link
+                  key={idx}
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="cursor-pointer"
+                >
+                  <Icon className="text-white/50 hover:text-white text-2xl cursor-pointer transition-colors size-6" />
+                </Link>
+              );
+            })}
+          </nav>
+
+          {process.env.NEXT_PUBLIC_LAST_UPDATED ? (
+            <p className="mt-2 text-center">
+              Last updated:{" "}
+              <span className="text-lime-400">
+                {new Date(
+                  process.env.NEXT_PUBLIC_LAST_UPDATED
+                ).toLocaleDateString("en-US", {
+                  year: "numeric",
+                  month: "short",
+                  day: "numeric",
+                })}
+              </span>
+            </p>
+          ) : null}
+        </div>
       </div>
     </footer>
   );
