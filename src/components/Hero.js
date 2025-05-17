@@ -88,7 +88,7 @@ const Hero = () => {
     <section
       className="pt-30 md:pt-20 lg:pt-10 lg:pb-40"
       // ref={containerRef}
-      style={{ cursor: `url(${customCursor.src}), auto` }}
+      // style={{ cursor: `url(${customCursor.src}), auto` }}
     >
       <div className="container relative">
         {/* <motion.div
