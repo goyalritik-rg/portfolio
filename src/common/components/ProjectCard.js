@@ -59,7 +59,7 @@ const ProjectCard = ({ className = "", project = {} }) => {
               rotateDirection === 1
                 ? "md:rotate-1"
                 : rotateDirection === -1
-                  ? "-md:rotate-1"
+                  ? "md:-rotate-1"
                   : ""
             )}
             onMouseMove={handleMouseMove}
