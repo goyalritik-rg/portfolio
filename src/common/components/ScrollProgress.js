@@ -33,7 +33,7 @@ const ScrollProgress = () => {
     <AnimatePresence>
       {isVisible && (
         <motion.div
-          className="fixed right-6 top-[40%] -translate-y-[40%] h-[200px] w-[2px] z-50"
+          className="fixed right-2 md:right-6 top-[40%] -translate-y-[40%] h-[200px] w-[2px] z-50"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
