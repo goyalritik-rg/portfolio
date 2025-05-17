@@ -3,6 +3,8 @@
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
+const messageInterval = 188; // Show each message for 188ms
+
 const helloMessages = [
   "Hello",
   "你好",
@@ -36,21 +38,16 @@ const HelloScreen = () => {
 
           setTimeout(() => {
             setShowSplash(false);
-          }, 300);
+          }, messageInterval);
 
           return prevIndex;
         }
         return prevIndex + 1;
       });
-    }, 200);
-
-    const splashTimer = setTimeout(() => {
-      setShowSplash(false);
-    }, 2500);
+    }, messageInterval);
 
     return () => {
       clearInterval(interval);
-      clearTimeout(splashTimer);
     };
   }, []);
 
@@ -64,11 +61,9 @@ const HelloScreen = () => {
             transition: { duration: 0.7, ease: [0.65, 0, 0.35, 1] },
           }}
         >
-          <div className="">
+          <div>
             {helloMessages.map((hello, index) => {
-              if (activeHelloIndex !== index) {
-                return null;
-              }
+              if (activeHelloIndex !== index) return null;
 
               return (
                 <div
