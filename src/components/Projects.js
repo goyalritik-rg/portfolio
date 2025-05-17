@@ -44,24 +44,6 @@ const Projects = () => {
           My Creative Internet <span className="text-lime-400">Playground</span>
         </h2>
 
-        {/* <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-20">
-          {projects.map((project, index) => {
-            // let className = "md:col-span-2 lg:col-span-1";
-
-            // if (index === projects.length - 1) {
-            //   className += " md:col-start-2 lg:col-start-auto";
-            // }
-
-            return (
-              <ProjectCard
-                // className={className}
-                project={project}
-                key={index}
-              />
-            );
-          })}
-        </div> */}
-
         <div className="mt-15 flex flex-col gap-[6rem] max-w-xl mx-auto">
           {projects.map((project, idx) => {
             return <ProjectCard project={project} key={idx} />;
