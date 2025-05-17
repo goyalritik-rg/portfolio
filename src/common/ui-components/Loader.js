@@ -1,10 +1,10 @@
 "use client";
 
-import { AiOutlineLoading3Quarters } from "react-icons/ai";
 import { twMerge } from "tailwind-merge";
 
 import { useAnimate } from "framer-motion";
 import { useEffect } from "react";
+import { LoaderCircle } from "lucide-react";
 
 const Loader = ({ className = "" }) => {
   const [scope, animate] = useAnimate();
@@ -17,12 +17,7 @@ const Loader = ({ className = "" }) => {
     );
   }, []);
 
-  return (
-    <AiOutlineLoading3Quarters
-      ref={scope}
-      className={twMerge("size-6", className)}
-    />
-  );
+  return <LoaderCircle ref={scope} className={twMerge("size-6", className)} />;
 };
 
 export default Loader;

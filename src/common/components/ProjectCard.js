@@ -1,13 +1,14 @@
 "use client";
 
 import { useState, useRef } from "react";
-import { FaGithub } from "react-icons/fa";
+
 // import { Lens } from "@/common/ui-components/Lens";
 import Share from "../svgs/Share";
 // import ProjectImage from "./ProjectImage";
 import Image from "next/image";
 import { twMerge } from "tailwind-merge";
 import Link from "next/link";
+import { Github } from "lucide-react";
 
 const TechChip = ({ tech }) => (
   <span className="inline-flex items-center px-3 py-1.5 rounded-full text-xs font-medium bg-white/10 text-white/80 backdrop-blur-sm border border-white/10 transition-all hover:bg-white/15">
@@ -91,11 +92,11 @@ const ProjectCard = ({ className = "", project = {} }) => {
 
       <div className="mt-6 flex items-center gap-4">
         <Link href={githubLink} target="_blank" rel="noopener noreferrer">
-          <FaGithub className="text-[32px] cursor-pointer" />
+          <Github className="size-8 cursor-pointer hover:text-lime-200 transition-all duration-300" />
         </Link>
 
         <Link href={siteUrl} target="_blank" rel="noopener noreferrer">
-          <Share className="cursor-pointer" />
+          <Share className="size-11 cursor-pointer hover:text-lime-200 transition-all duration-300" />
         </Link>
       </div>
     </div>

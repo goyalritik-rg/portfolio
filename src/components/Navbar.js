@@ -2,11 +2,10 @@
 
 import Button from "@/common/ui-components/Button";
 import { useEffect, useState } from "react";
-import { twMerge } from "tailwind-merge";
 import { AnimatePresence, motion } from "framer-motion";
 import Banner from "@/common/components/Banner";
-import Send from "@/common/svgs/Send";
 import { EMAIL } from "@/constants";
+import { Send } from "lucide-react";
 
 const navLinks = [
   { label: "About", id: "" },
@@ -86,7 +85,7 @@ const Navbar = () => {
               <div className="md:flex items-center gap-4 hidden">
                 <Button type="secondary" onClick={handleEmail}>
                   Email Me
-                  <Send className="size-6" />
+                  <Send className="size-6 ml-0.5" />
                 </Button>
               </div>
             </div>
@@ -120,7 +119,7 @@ const Navbar = () => {
                     onClick={handleEmail}
                   >
                     Email Me
-                    <Send className="size-6" />
+                    <Send className="size-6 ml-0.5" />
                   </Button>
                 </div>
               </motion.div>

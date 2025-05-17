@@ -4,13 +4,12 @@ import { buttonClass } from "@/common/ui-components/Button";
 // import Pointer from "@/common/components/Pointer";
 // import SampleBlock from "@/common/components/SampleBlock";
 // import { motion, useAnimate } from "framer-motion";
-import downloadSvg from "@/assets/download.svg";
 import customCursor from "@/assets/cursor-you.svg";
 import Image from "next/image";
 // import ContactForm from "./ContactForm";
-import Experiences from "./Experiences";
 import { FlipWords } from "@/common/ui-components/FlipWords";
 import Link from "next/link";
+import { Download } from "lucide-react";
 // import TetrisGame from "@/common/components/TetrisGame";
 
 const heroWords = ["Designs", "Layouts", "Dreams", "Ideas"];
@@ -174,7 +173,7 @@ const Hero = () => {
             rel="noopener noreferrer"
             className={buttonClass({ size: "sm", type: "primary" })}
           >
-            <Image src={downloadSvg} alt="Download" className="size-7" />
+            <Download className="size-7" />
           </Link>
         </div>
       </div>
