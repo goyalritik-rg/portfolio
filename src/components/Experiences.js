@@ -89,7 +89,7 @@ const experiences = [
 
 const Experiences = () => {
   return (
-    <section className="py-24 container mx-auto" id="experiences">
+    <section className="py-24 container mx-auto lg:pt-40" id="experience">
       <div className="flex justify-center">
         <Tag>Education & Experience</Tag>
       </div>
