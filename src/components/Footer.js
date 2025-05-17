@@ -5,6 +5,7 @@ import GLOBAL_CONSTANS from "@/constants";
 import { useRef, useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
+import { Copyright } from "lucide-react";
 
 const { socials } = GLOBAL_CONSTANS;
 
@@ -64,9 +65,10 @@ const Footer = () => {
             Built from scratch with Next.js & a lot of caffeine.
           </p>
 
-          <p className="mt-1 text-center w-full md:text-start">
-            <span className="text-lime-400 mr-1">
-              © {new Date().getFullYear()} Ritik Goyal.
+          <p className="mt-1 text-center w-full md:text-start flex items-center gap-1">
+            <span className="text-lime-400 mr-1 flex items-center gap-1">
+              <Copyright className="size-3" /> {new Date().getFullYear()} Ritik
+              Goyal.
             </span>
             All rights reserved.
           </p>
