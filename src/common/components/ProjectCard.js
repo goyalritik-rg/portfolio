@@ -81,7 +81,7 @@ const ProjectCard = ({ className = "", project = {} }) => {
 
         <h3 className="text-xl md:text-3xl font-medium">{label}</h3>
 
-        <p className="text-white/50 mt-2 text-xs md:text-sm">{description}</p>
+        <p className="text-white/50 mt-2 text-sm md:text-base">{description}</p>
 
         <div className="flex flex-wrap gap-2 mt-6">
           {techStack.map((tech, index) => (

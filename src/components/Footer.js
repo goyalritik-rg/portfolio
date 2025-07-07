@@ -60,12 +60,12 @@ const Footer = () => {
         ref={footerRef}
         className="max-w-7xl mx-auto px-4 flex flex-col-reverse md:flex-row justify-between items-center gap-4"
       >
-        <div className="flex flex-col items-start">
+        <div className="flex flex-col items-start max-sm:items-center max-sm:justify-center">
           <p className="text-neutral-500 text-center">
             Built from scratch with Next.js & a lot of caffeine.
           </p>
 
-          <p className="mt-1 text-center w-full md:text-start flex items-center gap-1">
+          <p className="mt-1 text-center w-full md:text-start flex items-center gap-1 max-sm:justify-center">
             <span className="text-lime-400 mr-1 flex items-center gap-1">
               <Copyright className="size-3" /> {new Date().getFullYear()} Ritik
               Goyal.
@@ -74,7 +74,7 @@ const Footer = () => {
           </p>
         </div>
 
-        <div className="flex flex-col items-start">
+        <div className="flex flex-col items-start max-sm:items-center max-sm:justify-center">
           <nav className="flex gap-4">
             {socials.map((link, idx) => {
               const { icon: Icon, href } = link;

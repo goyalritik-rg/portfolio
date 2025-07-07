@@ -25,7 +25,7 @@ export default function Timeline({ data }) {
 
   return (
     <div className="w-full bg-white dark:bg-neutral-950" ref={containerRef}>
-      <div ref={ref} className="relative max-w-7xl mx-auto pb-20">
+      <div ref={ref} className="relative max-w-7xl mx-auto mb-20">
         {data.map((item, index) => {
           const { title, content, startDate, endDate, company, icon } = item;
 
@@ -51,17 +51,17 @@ export default function Timeline({ data }) {
               <div className="relative pl-20 pr-4 lg:pl-4 w-full lg:w-[55%]">
                 <h3 className="lg:hidden block text-2xl md:text-3xl mb-4 text-left font-bold text-neutral-500 dark:text-neutral-500">
                   <p> {title}</p>
-                  <p className="text-lg md:text-xl">
+                  <p className="text-xl md:text-2xl">
                     {`${startDate} - ${endDate ? endDate : "Present"}`}
                   </p>
                 </h3>
 
                 <div className="flex gap-3 md:gap-5 flex-col">
-                  <p className="text-base md:text-3xl font-semibold text-neutral-500">
+                  <p className="text-lg md:text-3xl font-semibold text-neutral-500">
                     {company}
                   </p>
 
-                  <div className="text-xs md:text-base">{content}</div>
+                  <div className="text-sm md:text-base">{content}</div>
                 </div>
               </div>
             </div>
