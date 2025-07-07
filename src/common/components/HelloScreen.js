@@ -55,7 +55,7 @@ const HelloScreen = () => {
     <AnimatePresence>
       {showSplash && (
         <motion.div
-          className="fixed top-0 left-0 right-0 bottom-0 bg-[#0a0a0a] flex items-center justify-center z-999"
+          className="fixed inset-0 bg-[#0a0a0a] flex items-center justify-center z-999 h-[100svh]"
           exit={{
             y: "-100%",
             transition: { duration: 0.7, ease: [0.65, 0, 0.35, 1] },
